@@ -1,14 +1,14 @@
 {
   "files": {
-    ".github/workflows/org-context-integrity.yml": "17803eac31ad65bf19f751085ac1b7b23cab9ff7c38e87196c1f0ee271434162",
+    ".github/workflows/org-context-integrity.yml": "5b339b100fdf0966321e0a5302546046b771b3b3189f666d5944792ed5a3258f",
     "README.md": "dcdda5fb4a61b75ddeb193d4ecb7a86d3c08b037aadae4e38421d58826ca8606",
-    "agents/org-context.agent.md": "e2dc66656a9069f7bc3c0326a421e2f74c551b15e2be63ede0a69b61aff24d13",
-    "profile/README.md": "149b2b5283da712eca9cc307917b27fa71b94c9c5d81fa5ef696d7b934f2c95f",
-    "project-context.yaml": "e1f9674be7ef933bbd2b42ae6b56c142b4baba4bca7f259c52e6aa2f86ec966f"
+    "agents/org-context.agent.md": "b1a14a5836d3246a0a917c946958107a9d50584ca66571629b84dad13aa28431",
+    "profile/README.md": "b1934716712237ce0aa299bcb7bbaca62c2aaa14187d84eda6fa61e81314fa26",
+    "project-context.yaml": "d212da082bb36cabb3855d434797c8902bc4738ffd2754c51667c13ea88fe6b3"
   },
   "github_account_id": 297262292,
   "github_owner": "fiducia-cloud",
-  "registry_ref": "7929612d92e6aa37f966326cc1a50b4dcd150f3a",
+  "registry_ref": "d3e03ecc2e175a7f6261523d35c73ac775c49942",
   "registry_sha256": "ded5ed46190521e978b85dfb8a6d63d2480536b52d9b3c5bfd1bb399f94c0a9d",
   "schema_version": 1
 }
