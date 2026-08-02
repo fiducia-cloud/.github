@@ -8,7 +8,7 @@ This organization is mapped to the Linear project [github.com/fiducia-cloud](htt
 - Linear project ID: `d9e89bd3-19da-47f3-9bf7-6dc8cc910b70`
 - Linear team: `DEN` (`eb8ab169-5afe-4b6f-9cab-3f2aa3e887dc`)
 - Machine-readable context: [`project-context.yaml`](https://github.com/fiducia-cloud/.github/blob/main/project-context.yaml)
-- Canonical registry: [`ORESoftware/ai-agent-coordinator.rs/config/org-project-registry.yaml`](https://github.com/ORESoftware/ai-agent-coordinator.rs/blob/7929612d92e6aa37f966326cc1a50b4dcd150f3a/config/org-project-registry.yaml)
+- Canonical registry: [`ORESoftware/ai-agent-coordinator.rs/config/org-project-registry.yaml`](https://github.com/ORESoftware/ai-agent-coordinator.rs/blob/d3e03ecc2e175a7f6261523d35c73ac775c49942/config/org-project-registry.yaml)
 
 No default repository is declared; agents must resolve the exact repository and fail closed on ambiguity.
 
