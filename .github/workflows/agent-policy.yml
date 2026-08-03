@@ -32,6 +32,7 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
+          fetch-depth: 0
 
       - name: Validate repository policy and pull-request tracking
         shell: bash
@@ -81,3 +82,11 @@ jobs:
               raise SystemExit(1)
           print("organization policy validation passed")
           PY
+
+      - name: Validate canonical lowercase policy, workflow pins, conflict markers, and credentials
+        shell: bash
+        run: bash scripts/validate-agent-policy.sh
+
+      - name: Exercise fail-closed lowercase-policy validator fixtures
+        shell: bash
+        run: bash tests/agent-policy-validator.sh

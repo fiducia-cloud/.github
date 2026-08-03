@@ -1,8 +1,8 @@
 # GitHub Copilot repository instructions
 
-`/AGENTS.md` is the canonical policy for this repository. Follow it in full. This organization-level file is not automatically inherited by other repositories, so each repository must maintain a compatible root `AGENTS.md`.
+The canonical lowercase policy is [`/agents.md`](../agents.md). `/AGENTS.md` is the full compatibility mirror. Follow both in full; organization-level files are not automatically inherited by other repositories, so every repository must maintain compatible root instructions.
 
-**avoid git rebase in favor of git merge**
+**avoid git rebase in favor of git merge.**
 
 Resolve every Git conflict semantically and with full context. Read the merge base, both sides, surrounding code, documentation, tests, schemas, generated artifacts, and contracts. When available and relevant, inspect at least 3 and up to 10 prior commits from both sides with `git log`, `git show`, and `git blame`. Review related repositories in this organization and relevant external organizations when behavior crosses repository boundaries. Never accept `ours`, `theirs`, current, or incoming wholesale; preserve compatible intent and produce a conceptual merge.
 

@@ -1,12 +1,18 @@
-# Compatibility agent instructions
+# Organization-wide agent instructions
 
-The canonical lowercase policy is [`agents.md`](agents.md). This compatibility file mirrors the mandatory controls for tools that read only `AGENTS.md`; read and follow both files in full.
+This lowercase `agents.md` is the canonical public agent-safety policy for **fiducia-cloud**. It applies directly to this repository and is the minimum policy every repository in the organization must mirror at its own root or replace with a stricter equivalent.
+
+An organization `.github/agents.md` is not automatically inherited by sibling repositories or coding agents. Repository owners must copy or synchronize this policy into each repository and must not weaken it locally. Compatibility files such as `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `OPENAI.md`, and `.github/copilot-instructions.md` must reference this file while retaining enough policy context for tools that do not follow pointers.
+
+## Discover instructions hierarchically
+
+Resolve the current working directory, walk upward to the filesystem root, and read every readable lowercase `agents.md` on that ancestor chain in root-to-leaf order. Do not search sibling directories. Report unreadable instruction files rather than silently ignoring them.
 
 ## Required integration strategy
 
 **avoid git rebase in favor of git merge.**
 
-Use additive branches and semantic merge commits. Never rewrite shared history to make integration appear simpler.
+Use additive branches and semantic merge commits. Never rewrite shared history to make integration appear simpler. Inspect the current branch, worktree, remotes, default branch, related Linear work item, open pull requests, and affected cross-repository contracts before editing.
 
 ## Required semantic conflict-resolution declaration
 
@@ -19,9 +25,9 @@ Operationally, resolve every Git conflict semantically and with full context.
 Before finalizing any conflict resolution:
 
 1. Read the merge base, both sides, surrounding code and documentation, relevant tests, schemas, generated artifacts, deployment files, and public contracts—not only conflict markers.
-2. Inspect the affected history. When available and relevant, review at least 3 and up to 10 prior commits from both sides with path-scoped `git log`, `git show`, and `git blame`.
+2. Inspect the affected history. When available and relevant, review 3–10 relevant prior commits from both sides with path-scoped `git log`, `git show`, and `git blame`.
 3. Inspect related repositories in this organization and relevant external organizations whenever APIs, schemas, shared libraries, infrastructure, generated code, release processes, or runtime behavior cross repository boundaries.
-4. Preserve all compatible intent and invariants. Synthesize a conceptual merge instead of accepting `ours`, `theirs`, current, or incoming wholesale.
+4. Preserve all compatible intent and invariants. Synthesize a conceptual merge instead of accepting `ours` or `theirs` wholesale, or accepting current or incoming wholesale.
 5. Scan the complete worktree for unresolved conflict markers and run the most relevant tests, formatters, linters, builds, contract checks, security checks, and end-to-end checks.
 6. Document intentional tradeoffs, incompatible requirements, and discarded behavior in the commit, pull-request description, and linked Linear issue.
 
@@ -67,6 +73,12 @@ This blacklist is illustrative, not exhaustive. When an operation may destroy, d
 
 Never print, log, commit, paste into issues, or expose tokens, credentials, private keys, personal data, production data, or secret-bearing environment variables. Use placeholders in examples and redact diagnostics.
 
+## Pull requests, evidence, and validation
+
+Keep changes scoped, explain risks and migration effects, list exact validation performed, state whether conflicts occurred and how they were resolved, and never claim a remote action passed without authoritative evidence.
+
+GitHub Actions must use least-privilege permissions, explicit timeouts, concurrency cancellation where appropriate, checkout without persisted credentials, and immutable full-commit action pins. Dependency updates must remain reviewable and reproducible.
+
 ## Precedence
 
-Repository-local instructions may add stricter requirements, but they must not weaken the integration strategy, semantic conflict-resolution policy, mandatory Linear tracking, destructive-operation blacklist, secret-handling requirements, or validation expectations in the canonical `agents.md`.
+Repository-local instructions may add stricter requirements, but they must not weaken the integration strategy, semantic conflict-resolution policy, mandatory Linear tracking, destructive-operation blacklist, secret-handling requirements, or validation expectations in this file.
