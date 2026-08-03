@@ -25,7 +25,7 @@ Operationally, resolve every Git conflict semantically and with full context.
 Before finalizing any conflict resolution:
 
 1. Read the merge base, both sides, surrounding code and documentation, relevant tests, schemas, generated artifacts, deployment files, and public contracts—not only conflict markers.
-2. Inspect the affected history. When available and relevant, review at least 3 and up to 10 prior commits from both sides with path-scoped `git log`, `git show`, and `git blame`.
+2. Inspect the affected history. When available and relevant, review 3–10 relevant prior commits from both sides with path-scoped `git log`, `git show`, and `git blame`.
 3. Inspect related repositories in this organization and relevant external organizations whenever APIs, schemas, shared libraries, infrastructure, generated code, release processes, or runtime behavior cross repository boundaries.
 4. Preserve all compatible intent and invariants. Synthesize a conceptual merge instead of accepting `ours` or `theirs` wholesale, or accepting current or incoming wholesale.
 5. Scan the complete worktree for unresolved conflict markers and run the most relevant tests, formatters, linters, builds, contract checks, security checks, and end-to-end checks.
