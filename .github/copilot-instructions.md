@@ -2,11 +2,15 @@
 
 `/AGENTS.md` is the canonical policy for this repository. Follow it in full. This organization-level file is not automatically inherited by other repositories, so each repository must maintain a compatible root `AGENTS.md`.
 
-Resolve every Git conflict semantically and with full context. Read both sides plus surrounding code, documentation, tests, schemas, generated artifacts, and contracts. When relevant and available, inspect 3–10 prior commits using `git log`, `git show`, and `git blame`. Review related repositories in this organization and relevant external organizations when behavior crosses repository boundaries. Never hastily accept `ours` or `theirs`; preserve compatible intent and produce a conceptual merge.
+**avoid git rebase in favor of git merge**
 
-Operate non-destructively. Do not use `git stash`, `git reset`, `git clean`, `git filter-repo`, `git filter-branch`, history-rewriting rebase or amend operations, destructive checkout/restore, force pushes, ref deletion, pruning, recursive deletion, destructive database commands, infrastructure teardown, package unpublishing, or any equivalent action that discards, hides, rewrites, purges, or deletes state. Do not bypass hooks, tests, reviews, branch protections, or security checks.
+Resolve every Git conflict semantically and with full context. Read the merge base, both sides, surrounding code, documentation, tests, schemas, generated artifacts, and contracts. When available and relevant, inspect at least 3 and up to 10 prior commits from both sides with `git log`, `git show`, and `git blame`. Review related repositories in this organization and relevant external organizations when behavior crosses repository boundaries. Never accept `ours`, `theirs`, current, or incoming wholesale; preserve compatible intent and produce a conceptual merge.
 
-Leave unrelated work untouched. Prefer inspection, additive branches, separate clean worktrees or clones, explicit staging, normal non-force pushes, dry runs, backups, additive migrations, and reversible roll-forward changes. If safe progress is blocked, preserve state and report the blocker.
+Every discovered feature, fix, enhancement, bug, vulnerability, reliability concern, documentation gap, or technical-debt item requires a canonical Linear issue before implementation begins. Search first, link or create the issue, reference it in every pull request, synchronize status and evidence, and stop when routing is missing or ambiguous.
+
+Operate non-destructively. Never use `git rebase`, `git stash`, `git reset`, `git clean`, `git filter-repo`, `git filter-branch`, `git commit --amend`, destructive checkout or restore, branch or ref deletion, pruning, `git push --force`, `git push --force-with-lease`, or `git push -f`. Never use `rm`, `mv`, `sed`, `find -delete`, `xargs rm`, `truncate`, `shred`, `dd`, recursive deletion, destructive overwrites, `DROP`, `TRUNCATE`, unbounded `DELETE`, destructive rollback, `kubectl delete`, `helm uninstall`, `terraform destroy`, `pulumi destroy`, cloud deletion, package unpublishing, artifact purging, branch-protection bypass, or `--no-verify`. Do not bypass hooks, tests, reviews, or security checks.
+
+Leave unrelated, uncommitted, and untracked work untouched. Prefer inspection, additive branches, separate clean worktrees or clones, explicit staging, normal non-force pushes, dry runs, backups, additive migrations, and reversible roll-forward changes. If safe progress is blocked, preserve state and report the blocker.
 
 Never expose secrets or sensitive data. Run relevant validation and document conflict decisions, risks, and the linked Linear work item.
 

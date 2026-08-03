@@ -1,13 +1,25 @@
 # fiducia-cloud
 
-Fiducia Cloud builds coordination, consensus, distributed-locking, scheduling, and agent-control infrastructure with production-oriented Rust services and reproducible deployment practices.
+This organization is mapped to the Linear project [github.com/fiducia-cloud](https://linear.app/denman/project/githubcomfiducia-cloud-8fd5e1bec9d3).
 
-## Planning and governance
+## AI agent context
 
-- Canonical Linear project: https://linear.app/denman/project/githubcomfiducia-cloud-8fd5e1bec9d3
-- Organization defaults and policies: https://github.com/fiducia-cloud/.github
-- Agent-safety policy: https://github.com/fiducia-cloud/.github/blob/main/AGENTS.md
-- Contribution guide: https://github.com/fiducia-cloud/.github/blob/main/CONTRIBUTING.md
-- Security policy: https://github.com/fiducia-cloud/.github/security/policy
+- GitHub owner ID: `297262292`
+- Linear project ID: `d9e89bd3-19da-47f3-9bf7-6dc8cc910b70`
+- Linear team: `DEN` (`eb8ab169-5afe-4b6f-9cab-3f2aa3e887dc`)
+- Machine-readable context: [`project-context.yaml`](https://github.com/fiducia-cloud/.github/blob/main/project-context.yaml)
+- Canonical registry: [`ORESoftware/ai-agent-coordinator.rs/config/org-project-registry.yaml`](https://github.com/ORESoftware/ai-agent-coordinator.rs/blob/d3e03ecc2e175a7f6261523d35c73ac775c49942/config/org-project-registry.yaml)
 
-Every repository should link its substantial work to Linear, resolve conflicts semantically with full historical and cross-repository context, and maintain a root `AGENTS.md` that preserves the organization-wide destructive-operation blacklist.
+No default repository is declared; agents must resolve the exact repository and fail closed on ambiguity.
+
+Repository-local `AGENTS.md`, `agents.md`, and tool instructions remain authoritative for build, test, and implementation details. The central registry remains authoritative for GitHub/Linear identity and routing. Unmapped or ambiguous work must be rejected rather than guessed.
+
+## Semantic Git conflict resolution
+
+> resolve any and all git conflicts semantically, will full context, even looking back 3-10 commits in git log history for more context - never hastily pick sides in a conflict but merge things conceptually, using max context and complete conceptual awareness for a given github organization's repos and external org repos too
+
+Before resolving a conflict, inspect the merge base and 3–10 relevant commits from both sides when available, including path-scoped history for every conflicted file. Read repository-local instructions, linked Linear issues, pull requests, architecture decisions, tests, migrations, schemas, and documentation. When a contract crosses repository boundaries, inspect relevant repositories in the same GitHub organization and relevant repositories in external GitHub organizations too.
+
+Never resolve by blindly or wholesale selecting `ours`, `theirs`, current, or incoming. Produce a conceptual merge that preserves compatible intent, invariants, APIs, schemas, migrations, tests, documentation, security controls, and operational safeguards from all relevant sides. Document non-obvious decisions, scan the whole worktree for conflict markers, and run every affected validation contract. “Max context” means all relevant authorized context; it never authorizes exposing credentials, private data, or hidden reasoning.
+
+This public repository contains identifiers, links, and public operating guidance only. Do not place credentials, private customer data, or private operational details here.
