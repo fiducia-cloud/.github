@@ -1,8 +1,6 @@
-# Organization-wide agent instructions
+# Compatibility agent instructions
 
-This is the canonical public agent-safety policy for **fiducia-cloud**. It applies directly to this repository and is the minimum policy every repository in the organization must mirror in its root `AGENTS.md` or replace with a stricter equivalent.
-
-An organization `.github/AGENTS.md` is not automatically inherited by coding agents. Repository owners must copy or synchronize this policy into each repository and must not weaken it locally.
+The canonical lowercase policy is [`agents.md`](agents.md). This compatibility file mirrors the mandatory controls for tools that read only `AGENTS.md`; read and follow both files in full.
 
 ## Required integration strategy
 
@@ -71,4 +69,4 @@ Never print, log, commit, paste into issues, or expose tokens, credentials, priv
 
 ## Precedence
 
-Repository-local instructions may add stricter requirements, but they must not weaken the integration strategy, semantic conflict-resolution policy, mandatory Linear tracking, destructive-operation blacklist, secret-handling requirements, or validation expectations in this file.
+Repository-local instructions may add stricter requirements, but they must not weaken the integration strategy, semantic conflict-resolution policy, mandatory Linear tracking, destructive-operation blacklist, secret-handling requirements, or validation expectations in the canonical `agents.md`.
