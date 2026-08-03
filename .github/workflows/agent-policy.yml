@@ -1,4 +1,4 @@
-name: Reusable organization policy
+name: Agent policy
 
 on:
   workflow_call:

@@ -1,19 +1,17 @@
 # GitHub Copilot repository instructions
 
-`/AGENTS.md` is the canonical guidance for this repository. Keep this mirror aligned with it.
-
-## Safe change control
+`/AGENTS.md` is the canonical policy for this repository. Follow it in full. This organization-level file is not automatically inherited by other repositories, so each repository must maintain a compatible root `AGENTS.md`.
 
 **avoid git rebase in favor of git merge**
 
-Inspect the worktree before mutation and publishing. Never run destructive Git commands such as `git rebase`, `git stash`, `git reset`, `git clean`, `git filter-repo`, `git checkout --`, `git restore`, `git branch -D`, `git reflog expire`, `git gc --prune`, `git push --force`, or `git push -f`. Never run destructive filesystem commands such as `rm`, `mv`, `sed`, `find -delete`, `xargs rm`, `truncate`, `shred`, or `dd`. Never force-push, bypass checks, or discard unfamiliar uncommitted or untracked work. Stop and report unexpected changes or ambiguous ownership.
+Resolve every Git conflict semantically and with full context. Read the merge base, both sides, surrounding code, documentation, tests, schemas, generated artifacts, and contracts. When available and relevant, inspect at least 3 and up to 10 prior commits from both sides with `git log`, `git show`, and `git blame`. Review related repositories in this organization and relevant external organizations when behavior crosses repository boundaries. Never accept `ours`, `theirs`, current, or incoming wholesale; preserve compatible intent and produce a conceptual merge.
 
-## Linear tracking
+Every discovered feature, fix, enhancement, bug, vulnerability, reliability concern, documentation gap, or technical-debt item requires a canonical Linear issue before implementation begins. Search first, link or create the issue, reference it in every pull request, synchronize status and evidence, and stop when routing is missing or ambiguous.
 
-Every discovered feature, fix, enhancement, bug, vulnerability, reliability concern, documentation gap, or technical-debt item requires a canonical Linear issue before implementation. Search first, create only when needed, link the issue in every pull request, keep status and evidence synchronized, and fail closed when GitHub-to-Linear routing is missing or ambiguous.
+Operate non-destructively. Never use `git rebase`, `git stash`, `git reset`, `git clean`, `git filter-repo`, `git filter-branch`, `git commit --amend`, destructive checkout or restore, branch or ref deletion, pruning, `git push --force`, `git push --force-with-lease`, or `git push -f`. Never use `rm`, `mv`, `sed`, `find -delete`, `xargs rm`, `truncate`, `shred`, `dd`, recursive deletion, destructive overwrites, `DROP`, `TRUNCATE`, unbounded `DELETE`, destructive rollback, `kubectl delete`, `helm uninstall`, `terraform destroy`, `pulumi destroy`, cloud deletion, package unpublishing, artifact purging, branch-protection bypass, or `--no-verify`. Do not bypass hooks, tests, reviews, or security checks.
 
-## Semantic conflict resolution
+Leave unrelated, uncommitted, and untracked work untouched. Prefer inspection, additive branches, separate clean worktrees or clones, explicit staging, normal non-force pushes, dry runs, backups, additive migrations, and reversible roll-forward changes. If safe progress is blocked, preserve state and report the blocker.
 
-Resolve every Git conflict semantically and with full context. Read the merge base, both sides, surrounding code, documentation, tests, and contracts. When available, inspect at least 3 and up to 10 relevant prior commits using `git log`, `git show`, and `git blame`. Review related repositories in this organization and relevant external-organization repositories whenever shared APIs, schemas, libraries, generated artifacts, infrastructure, or behavior are involved.
+Never expose secrets or sensitive data. Run relevant validation and document conflict decisions, risks, and the linked Linear work item.
 
-Never hastily accept `ours`, `theirs`, current, or incoming, discard unfamiliar changes, or resolve only from conflict markers. Preserve compatible intent from every side, synthesize a conceptual merge, run the relevant validation, and document intentional tradeoffs in GitHub and Linear.
+Linear project: https://linear.app/denman/project/githubcomfiducia-cloud-8fd5e1bec9d3

@@ -1,7 +1,9 @@
 # Code of conduct
 
-We expect respectful, technically constructive collaboration. Harassment, threats, discrimination, doxxing, unwanted sexual attention, sustained disruption, and publication of another person's private information are not acceptable.
+We are committed to a professional, inclusive, and technically rigorous collaboration environment.
 
-Focus criticism on ideas and behavior, assume good faith while evidence supports it, document decisions, and make room for correction. Maintainers may edit or remove abusive content, limit participation, or escalate serious safety concerns.
+Contributors must communicate respectfully, critique ideas rather than people, provide evidence for technical claims, protect confidential and personal information, and avoid harassment, discrimination, threats, unwanted sexual attention, doxxing, or sustained disruption.
 
-Report conduct concerns privately to an organization owner through a verified channel. Do not expose complainants, witnesses, private data, or sensitive evidence in public issues. Enforcement decisions should be proportionate, documented privately, and free of retaliation.
+Good-faith disagreement is welcome. Reviews should be specific, actionable, and proportionate. Conflict resolution must preserve contributor work and project intent; unfamiliar changes must not be deleted merely to simplify a merge.
+
+Report conduct concerns privately to organization maintainers through a verified private channel. Maintainers may edit or remove abusive content, limit participation, or take other proportionate action. Retaliation against good-faith reporters is prohibited.

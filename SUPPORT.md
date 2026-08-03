@@ -1,7 +1,7 @@
 # Support
 
-Use the affected repository's documentation, discussions, or issue tracker for reproducible product and developer-support requests. Search existing material first and provide the repository, version or commit, environment, expected behavior, actual behavior, and a minimal reproduction.
+For roadmap, cross-repository planning, and internal delivery status, use the [fiducia-cloud Linear project](https://linear.app/denman/project/githubcomfiducia-cloud-8fd5e1bec9d3).
 
-Do not post credentials, tokens, private messages, customer information, security reports, or other sensitive data. Security concerns must follow `SECURITY.md`.
+For a reproducible bug or a scoped feature request, open an issue in the affected repository using the organization issue forms. Include the repository, version or commit, environment, expected behavior, actual behavior, reproduction steps, impact, and sanitized logs.
 
-Maintainers must map accepted feature, fix, enhancement, bug, reliability, documentation, and technical-debt work to the canonical Linear project before implementation begins.
+Do not post vulnerabilities, credentials, personal data, or production data in public support channels. Follow [`SECURITY.md`](SECURITY.md) for private reporting.

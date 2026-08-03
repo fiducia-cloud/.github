@@ -1,47 +1,39 @@
 name: Feature request
-description: Propose a scoped improvement
+description: Propose a scoped, testable improvement
 title: "[Feature]: "
-labels: ["enhancement", "triage"]
 body:
-  - type: checkboxes
-    attributes:
-      label: Preflight
-      options:
-        - label: I searched existing issues, pull requests, and documentation.
-          required: true
-        - label: I removed credentials, private data, and customer information.
-          required: true
   - type: input
     id: repository
     attributes:
-      label: Target repository
-      placeholder: owner/repository
+      label: Target repository or organization area
+      placeholder: fiducia-cloud/repository
     validations:
       required: true
   - type: textarea
     id: problem
     attributes:
-      label: Problem and users affected
-      description: Describe the outcome needed rather than only a proposed implementation.
+      label: Problem or opportunity
+      description: Describe the user, operational, or developer need before proposing a solution.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome and acceptance criteria
     validations:
       required: true
   - type: textarea
     id: proposal
     attributes:
-      label: Proposed behavior
-      description: Include compatibility, security, operations, and migration implications.
-    validations:
-      required: true
+      label: Proposed approach
+      description: Include affected contracts, repositories, migrations, infrastructure, and alternatives.
   - type: textarea
-    id: acceptance
+    id: risks
     attributes:
-      label: Acceptance criteria
-      description: List observable completion and validation criteria.
-    validations:
-      required: true
-  - type: textarea
-    id: alternatives
+      label: Risks and rollout
+      description: Explain compatibility, security, migration, observability, and reversible rollout considerations.
+  - type: input
+    id: linear
     attributes:
-      label: Alternatives and tradeoffs
-    validations:
-      required: false
+      label: Related Linear issue or project
+      placeholder: https://linear.app/denman/...

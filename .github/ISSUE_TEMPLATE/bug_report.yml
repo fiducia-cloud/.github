@@ -1,37 +1,40 @@
 name: Bug report
-description: Report a reproducible defect
+description: Report a reproducible defect without sensitive data
 title: "[Bug]: "
-labels: ["bug", "triage"]
 body:
-  - type: checkboxes
+  - type: markdown
     attributes:
-      label: Preflight
-      options:
-        - label: I searched existing issues and documentation.
-          required: true
-        - label: I removed credentials, private data, and customer information.
-          required: true
-        - label: This is not a security vulnerability; security reports follow SECURITY.md.
-          required: true
+      value: |
+        Do not include vulnerabilities, credentials, personal data, or production data. Use the private security-reporting process for security issues.
   - type: input
     id: repository
     attributes:
       label: Affected repository
-      placeholder: owner/repository
+      placeholder: fiducia-cloud/repository
     validations:
       required: true
   - type: input
     id: version
     attributes:
       label: Version or commit
-      placeholder: release, tag, or commit SHA
+      placeholder: Version, tag, branch, or commit SHA
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Problem
+      description: Describe the observed behavior and impact.
     validations:
       required: true
   - type: textarea
     id: reproduction
     attributes:
-      label: Minimal reproduction
-      description: Provide deterministic steps and the smallest safe example.
+      label: Reproduction steps
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
     validations:
       required: true
   - type: textarea
@@ -41,15 +44,16 @@ body:
     validations:
       required: true
   - type: textarea
-    id: actual
-    attributes:
-      label: Actual behavior
-    validations:
-      required: true
-  - type: textarea
     id: environment
     attributes:
-      label: Environment and diagnostics
-      description: Include relevant runtime, operating system, logs, and configuration with secrets removed.
-    validations:
-      required: true
+      label: Environment
+      description: OS, runtime, deployment target, relevant configuration, and sanitized logs.
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety checks
+      options:
+        - label: I removed secrets, personal data, and production data.
+          required: true
+        - label: I did not use destructive commands to create this report.
+          required: true

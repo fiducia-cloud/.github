@@ -1,28 +1,34 @@
 # Contributing
 
-## Work tracking
+Thank you for contributing to fiducia-cloud.
 
-Every discovered feature, fix, enhancement, bug, vulnerability, reliability concern, documentation gap, or technical-debt item must have a Linear issue in the canonical project before implementation starts. Search first, link the existing issue when possible, and create one only when necessary. Pull requests must include the Linear identifier or canonical Linear URL and keep acceptance criteria and validation evidence synchronized. Stop rather than guess when project routing is missing or ambiguous.
+## Before starting
 
-## Safe change control
+1. Read [`AGENTS.md`](AGENTS.md), [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md), and [`SECURITY.md`](SECURITY.md).
+2. Search for the relevant work item in the [fiducia-cloud Linear project](https://linear.app/denman/project/githubcomfiducia-cloud-8fd5e1bec9d3); create one when no suitable item exists.
+3. Every discovered feature, fix, enhancement, bug, vulnerability, reliability concern, documentation gap, or technical-debt item must have a Linear issue before implementation begins.
+4. Confirm the affected repositories, contracts, generated artifacts, infrastructure, deployment boundaries, and external dependencies.
+
+## Non-destructive workflow
 
 **avoid git rebase in favor of git merge**
 
-Preserve uncommitted and untracked work. Inspect the worktree before mutation and publishing. Do not use destructive Git commands, including `git rebase`, `git stash`, `git reset`, `git clean`, `git filter-repo`, `git checkout --`, `git restore`, `git branch -D`, `git reflog expire`, `git gc --prune`, `git push --force`, or `git push -f`. Do not use destructive filesystem commands, including `rm`, `mv`, `sed`, `find -delete`, `xargs rm`, `truncate`, `shred`, or `dd`. Never force-push, bypass required checks, or discard unfamiliar work. Stop and report unexpected changes or ambiguous ownership.
+Leave unrelated, uncommitted, and untracked work untouched. Agents and automated contributors must not use `git rebase`, `git stash`, `git reset`, `git clean`, `git filter-repo`, `git filter-branch`, `git commit --amend`, destructive checkout or restore, branch or ref deletion, pruning, `git push --force`, `git push --force-with-lease`, `git push -f`, `rm`, `mv`, `sed`, recursive deletion, `find -delete`, `xargs rm`, `truncate`, `shred`, `dd`, destructive database commands such as `DROP`, `TRUNCATE`, or unbounded `DELETE`, destructive infrastructure commands such as `kubectl delete`, `helm uninstall`, `terraform destroy`, or `pulumi destroy`, release or artifact deletion, branch-protection bypass, `--no-verify`, or equivalent operations. Use additive branches, clean worktrees or clones, explicit staging, normal pushes, dry runs, backups, additive migrations, and reversible roll-forward changes.
 
-## Mandatory semantic conflict resolution
+## Conflicts
 
-Resolve every Git conflict semantically and with full context. Conflict markers are the starting point for analysis, not the complete context.
+Resolve every conflict semantically and with full context. Read the merge base, both sides, and the surrounding subsystem; inspect at least 3 and up to 10 relevant prior commits from both sides when available; review related organization and external repositories when contracts cross boundaries; preserve compatible intent in a conceptual merge instead of accepting `ours` or `theirs` wholesale; run relevant validation; and explain tradeoffs in the pull request and Linear issue. Stop and report whenever safe progress or routing is blocked.
 
-Before finalizing a resolution:
+## Pull requests
 
-1. Inspect the merge base, both sides of the conflict, surrounding code or documentation, tests, schemas, migrations, and contracts.
-2. When history is available, inspect at least 3 and up to 10 relevant commits from both sides. Use path-scoped `git log`, `git show`, and `git blame` where useful.
-3. Review related repositories in this GitHub organization and relevant repositories in external organizations whenever APIs, shared libraries, generated artifacts, infrastructure, deployments, or documentation cross repository boundaries.
-4. Never accept `ours`, `theirs`, current, or incoming wholesale merely to clear the conflict. Preserve compatible intent and produce a conceptual merge.
-5. Scan the complete worktree for unresolved conflict markers. Run all affected tests, formatters, linters, builds, integrity checks, contract checks, security checks, and end-to-end validation.
-6. Document non-obvious choices, incompatible requirements, discarded intent, and operational tradeoffs in the commit, pull-request description, and Linear issue.
+Keep each pull request coherent and reviewable. Include:
 
-Full context means all relevant context the contributor is authorized to access. It never authorizes disclosure of credentials, private data, or customer information.
+- the linked Linear issue or canonical Linear URL;
+- the problem and intended outcome;
+- important implementation and architecture choices;
+- compatibility, migration, security, and operational risks;
+- tests, checks, and manual validation performed;
+- conflict-resolution details, when applicable;
+- newly discovered follow-up work and its Linear references.
 
-Repository-local instructions may add stricter requirements but must not weaken this policy.
+Never commit secrets, production data, personal data, generated credentials, or local environment files. Repository-local rules may be stricter but may not weaken this baseline.
