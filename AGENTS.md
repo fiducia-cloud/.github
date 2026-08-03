@@ -4,7 +4,7 @@ The canonical lowercase policy is [`agents.md`](agents.md). This compatibility f
 
 ## Required integration strategy
 
-**avoid git rebase in favor of git merge**
+**avoid git rebase in favor of git merge.**
 
 Use additive branches and semantic merge commits. Never rewrite shared history to make integration appear simpler.
 
