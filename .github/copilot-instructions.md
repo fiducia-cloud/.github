@@ -1,6 +1,6 @@
 # GitHub Copilot repository instructions
 
-`/AGENTS.md` is the canonical policy for this repository. Follow it in full. This organization-level file is not automatically inherited by other repositories, so each repository must maintain a compatible root `AGENTS.md`.
+The canonical lowercase policy is [`/agents.md`](../agents.md). `/AGENTS.md` is the full compatibility mirror. Follow both in full; organization-level files are not automatically inherited by other repositories, so every repository must maintain compatible root instructions.
 
 **avoid git rebase in favor of git merge**
 
