@@ -3,6 +3,16 @@
 - Canonical issue or URL: <!-- Required for every material change; for example DEN-123 -->
 - Newly discovered follow-up items: <!-- Link every feature, fix, enhancement, bug, vulnerability, reliability concern, documentation gap, or technical-debt item -->
 
+## GitHub issue relationship
+
+- Closing relationship: <!-- Required for managed changes; for example Closes #123 or Closes owner/repository#123 -->
+
+## Delivery lane
+
+- [ ] `integration`
+- [ ] `main` / `master`
+- [ ] Other branch (explain below)
+
 ## Summary
 
 <!-- What changed, why, and who or what is affected? -->
@@ -16,6 +26,7 @@
 - [ ] Relevant tests, formatting, linting, builds, contract checks, integrity checks, and security checks passed
 - [ ] Manual or end-to-end validation is described below
 - [ ] Validation evidence and final status are synchronized to Linear
+- [ ] The referenced GitHub issue and Linear issue are present on the organization Project
 
 Validation details:
 
