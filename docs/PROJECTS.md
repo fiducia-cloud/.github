@@ -2,32 +2,17 @@
 # Project routing
 
 - **GitHub organization:** [fiducia-cloud](https://github.com/fiducia-cloud)
-- **Organization GitHub Project:** [fiducia-cloud-project](https://github.com/orgs/fiducia-cloud/projects/1) (project 1)
-- **Shared Linear project:** [fiducia-cloud](https://linear.app/denman/project/fiducia-cloud-8fd5e1bec9d3)
-- **Independent test organization:** [fiducia-cloud-test](https://github.com/fiducia-cloud-test)
-- **Test-fleet GitHub Project:** [fiducia-cloud-test-project](https://github.com/orgs/fiducia-cloud-test/projects/1) (project 1)
-- **Program issue:** [DEN-2353 — Everything E2E](https://linear.app/denman/issue/DEN-2353/e2e-program-certify-every-fiducia-production-surface-through)
-- **Program plan:** [Everything E2E — Full-System Test Program](https://linear.app/denman/document/everything-e2e-full-system-test-program-57e84c9eb677)
+- **Canonical GitHub Project:** [fiducia-cloud-project](https://github.com/orgs/fiducia-cloud/projects/1) (project 1)
+- **Canonical Linear project:** [planning workspace](https://linear.app/denman/project/githubcomfiducia-cloud-8fd5e1bec9d3)
 - **Organization documentation repository:** [fiducia-cloud/.github](https://github.com/fiducia-cloud/.github)
 
-## One planning project, two execution boards
+## Source-of-truth boundaries
 
-Both GitHub organizations share the single Linear project `fiducia-cloud`. Linear owns product outcomes, priorities, dependencies, milestones, acceptance criteria, and release-readiness status. Do not create a parallel test-only Linear backlog.
-
-Each organization keeps GitHub Project #1 for its execution boundary:
-
-- `fiducia-cloud` owns product code, white-box tests, interfaces, migrations, packages/images, releases, deployments, and product-side evidence.
-- `fiducia-cloud-test` owns independent black-box probes, clean consumers, compatibility matrices, chaos/scale/recovery execution, and retained certification evidence.
-
-Every GitHub Project item should link to a canonical Linear issue. Every Linear issue should link to the relevant repositories, pull requests, workflow runs, release manifests, and evidence bundles.
-
-## Release boundary
-
-A production repository's green unit/integration checks are necessary but do not independently certify a release. Required capabilities must also pass the independent paths defined in [`INDEPENDENT-E2E.md`](INDEPENDENT-E2E.md) and the test organization's machine-readable catalog. Missing, skipped, blocked, quarantined, or mutable-artifact execution never satisfies a release gate.
+GitHub is authoritative for repositories, commits, pull requests, reviews, CI checks, releases, deployable artifacts, and runtime evidence. Linear is authoritative for product planning, priorities, ownership, dependencies, milestones, and status reporting. The GitHub Project is the organization-level execution board and should contain the governance issue maintained by this repository.
 
 ## Change and merge policy
 
-Documentation and automation changes use pull requests and merge after review/checks. Concurrent edits are reconciled semantically against the latest default branch. Preserve unrelated prose and regenerate managed blocks without blindly choosing one side of a conflict.
+Documentation branches must be reviewed through pull requests and merged after checks pass. Concurrent edits are reconciled semantically against the latest default branch: this managed routing block is regenerated while all unrelated prose outside the block is preserved. Do not resolve conflicts by blindly choosing one side.
 <!-- org-project-routing:end -->
 
 ## Audited organization snapshot
