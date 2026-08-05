@@ -1,0 +1,45 @@
+name: Repository map integrity
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/repository-map.yml"
+      - "docs/PROJECTS.md"
+      - "docs/REPOSITORY_MAP.md"
+      - "docs/repository-map.json"
+      - "tools/validate_repository_map.py"
+      - "tests/test_repository_map.py"
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/repository-map.yml"
+      - "docs/PROJECTS.md"
+      - "docs/REPOSITORY_MAP.md"
+      - "docs/repository-map.json"
+      - "tools/validate_repository_map.py"
+      - "tests/test_repository_map.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: repository-map-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate inventory, routing, URLs, and secret boundary
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Validate canonical repository map
+        run: python3 tools/validate_repository_map.py
+
+      - name: Run fail-closed validator tests
+        run: python3 -m unittest discover -s tests -p 'test_repository_map.py' -v
