@@ -29,7 +29,7 @@
     "contains_non_public_inventory": true,
     "digest": "sha256:76884b55b18c3e6134a7edf0e055ffb9e4f0fffe707fee6871d7839fe3d214ed",
     "path": "owners/fiducia-cloud.json",
-    "repository": "ORESoftware/project-registry"
+    "repository": "approved-private-registry"
   },
   "relationships": [
     {
