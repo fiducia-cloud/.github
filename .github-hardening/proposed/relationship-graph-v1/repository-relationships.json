@@ -1,0 +1,1044 @@
+{
+  "$schema": "./repository-relationships.schema.json",
+  "audience": "public",
+  "generated": {
+    "complete_for_visibility": "public",
+    "generated_at": "2026-08-05T21:07:32Z",
+    "generator_version": "2026-08-04.1",
+    "inventory_digest": "sha256:98443c14df445d7911bbcb07b824c98266bcb70c24d9db4a4280da6cf937f993",
+    "managed_by": "ore-repository-relationship-rollout",
+    "omitted_repository_count": 5,
+    "private_repositories_omitted": true,
+    "source": "GitHub GraphQL repository inventory plus reviewed manual declarations"
+  },
+  "owner": {
+    "account_type": "organization",
+    "dotgithub_repository": "fiducia-cloud/.github",
+    "github_id": "297262292",
+    "linear_project": {
+      "id": "d9e89bd3-19da-47f3-9bf7-6dc8cc910b70",
+      "name": "github.com/fiducia-cloud",
+      "team_id": "eb8ab169-5afe-4b6f-9cab-3f2aa3e887dc",
+      "url": "https://linear.app/denman/project/githubcomfiducia-cloud-8fd5e1bec9d3",
+      "workspace": "denman"
+    },
+    "login": "fiducia-cloud",
+    "mapping_id": "context:fiducia-cloud"
+  },
+  "private_registry": {
+    "contains_non_public_inventory": true,
+    "digest": "sha256:76884b55b18c3e6134a7edf0e055ffb9e4f0fffe707fee6871d7839fe3d214ed",
+    "path": "owners/fiducia-cloud.json",
+    "repository": "ORESoftware/project-registry"
+  },
+  "relationships": [
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub GraphQL repository inventory"
+        }
+      ],
+      "from": "fiducia-cloud/.github",
+      "id": "sha256:26a996f570701497adab2fae9b772c7354e9a579f2ad032f01d9b4199ff3098e",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "fiducia-cloud/fiducia-admin.rs",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub GraphQL repository inventory"
+        }
+      ],
+      "from": "fiducia-cloud/.github",
+      "id": "sha256:722213a516854a4d26c5cceca18b325f3e066fcc493c24a5b82f3dd57e1b1850",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "fiducia-cloud/fiducia-ai-agent-manager.rs",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub GraphQL repository inventory"
+        }
+      ],
+      "from": "fiducia-cloud/.github",
+      "id": "sha256:0be6eba1e1304774eee79a8202b066df7737c26eca41ada7abff668968d8cd2e",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "fiducia-cloud/fiducia-auth.rs",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub GraphQL repository inventory"
+        }
+      ],
+      "from": "fiducia-cloud/.github",
+      "id": "sha256:b5c4173e276d7c626fe61cb59794184a79ce560b7f6e11aa0f4226a1660420fa",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "fiducia-cloud/fiducia-brain.rs",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub GraphQL repository inventory"
+        }
+      ],
+      "from": "fiducia-cloud/.github",
+      "id": "sha256:5b852b5aeefc0c0dc1888a4003535025e1d6501a0b83ff0ca0e349e16edc7ce7",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "fiducia-cloud/fiducia-cli.rs",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub GraphQL repository inventory"
+        }
+      ],
+      "from": "fiducia-cloud/.github",
+      "id": "sha256:31535c2c142ffb776391c49fea95835f0e3553258394e1de787703115f77c046",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "fiducia-cloud/fiducia-clients",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub GraphQL repository inventory"
+        }
+      ],
+      "from": "fiducia-cloud/.github",
+      "id": "sha256:b9376e5f77e7d4725ba2155b5ad473bc33a515823965705bdf7c4c61f9ef7c35",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "fiducia-cloud/fiducia-cloud.github.io",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub GraphQL repository inventory"
+        }
+      ],
+      "from": "fiducia-cloud/.github",
+      "id": "sha256:8dc39f425dee40c859a2cd23fd7b3f18db61d68eccbd56b1fc990b2a6a77b837",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "fiducia-cloud/fiducia-customer-ui.web",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub GraphQL repository inventory"
+        }
+      ],
+      "from": "fiducia-cloud/.github",
+      "id": "sha256:cb65a48ad1dc165457d573403c030f81ec84813d70526714ef8bb486fe3db804",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "fiducia-cloud/fiducia-customer.rs",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub GraphQL repository inventory"
+        }
+      ],
+      "from": "fiducia-cloud/.github",
+      "id": "sha256:b014c61644d7f0ca0c2c050ac96a2c96ffb58072e20098eb3565165ff297513a",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "fiducia-cloud/fiducia-edge",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub GraphQL repository inventory"
+        }
+      ],
+      "from": "fiducia-cloud/.github",
+      "id": "sha256:2f91441e5285280c27fb60a0e39d6297aa48d6be8667fb0ab04620aa62d6d5c8",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "fiducia-cloud/fiducia-infra",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub GraphQL repository inventory"
+        }
+      ],
+      "from": "fiducia-cloud/.github",
+      "id": "sha256:a474eef75cfa982188afd36a226a2c13fbd8dd2d6b169917eded1a1d7fbdc826",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "fiducia-cloud/fiducia-interfaces",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub GraphQL repository inventory"
+        }
+      ],
+      "from": "fiducia-cloud/.github",
+      "id": "sha256:6029162ab503992c21c98e98bd2fca5864629cdf87b9e44f9b13bcb768846ed7",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "fiducia-cloud/fiducia-lambda-service.rs",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub GraphQL repository inventory"
+        }
+      ],
+      "from": "fiducia-cloud/.github",
+      "id": "sha256:91610fc3b78c07c60d0a9785a95353a4380873221baeb78ab7be82966ddd8b3e",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "fiducia-cloud/fiducia-load-balance.rs",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub GraphQL repository inventory"
+        }
+      ],
+      "from": "fiducia-cloud/.github",
+      "id": "sha256:e296be2f601fdb094cc54213b9664aac0d9f66894c93e020dbecbaaa876d3a2f",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "fiducia-cloud/fiducia-marketing.web",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub GraphQL repository inventory"
+        }
+      ],
+      "from": "fiducia-cloud/.github",
+      "id": "sha256:c2dee5e6aa47ccb06ae7574f94a4f49d8f256a8d06fa3bfdd22d9c9fd258fe04",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "fiducia-cloud/fiducia-mcp-server.rs",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub GraphQL repository inventory"
+        }
+      ],
+      "from": "fiducia-cloud/.github",
+      "id": "sha256:9339e1b06107f8c947552d985f089932dd86a91e2a4787812cc877a10271353c",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "fiducia-cloud/fiducia-memory",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub GraphQL repository inventory"
+        }
+      ],
+      "from": "fiducia-cloud/.github",
+      "id": "sha256:98d596dbce2305d5ac9227fdabcad1191d27e4acfa12187c8b5139454ce2534a",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "fiducia-cloud/fiducia-memory.rs",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub GraphQL repository inventory"
+        }
+      ],
+      "from": "fiducia-cloud/.github",
+      "id": "sha256:09126f6d7d001a9c8d87916d59730502d62cad9ba02f75a4c7ec767bb3daf684",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "fiducia-cloud/fiducia-messaging",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub GraphQL repository inventory"
+        }
+      ],
+      "from": "fiducia-cloud/.github",
+      "id": "sha256:740a9b9a04f94acdbd5c99840b9bf20d6e30cfd687c9f42421a766e79bb82593",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "fiducia-cloud/fiducia-messaging.rs",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub GraphQL repository inventory"
+        }
+      ],
+      "from": "fiducia-cloud/.github",
+      "id": "sha256:54289d0858d1d7f6de8b84a8e37d55a5be2b7965258c534df00c8478c184b7ca",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "fiducia-cloud/fiducia-monorepo",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub GraphQL repository inventory"
+        }
+      ],
+      "from": "fiducia-cloud/.github",
+      "id": "sha256:efe6347e04c6eedad9498307eaba3c7066aba60a624456cec315f2d80d2bae27",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "fiducia-cloud/fiducia-node-sidecar.rs",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub GraphQL repository inventory"
+        }
+      ],
+      "from": "fiducia-cloud/.github",
+      "id": "sha256:ffa5b1c20f94072f673385593f0cca986f6c419c4d10f9944e16864896e324b2",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "fiducia-cloud/fiducia-node.rs",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub GraphQL repository inventory"
+        }
+      ],
+      "from": "fiducia-cloud/.github",
+      "id": "sha256:34f50474080181eb1bafa5ecd0133d34b9491ac97d7ba326fd1178b376b760cd",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "fiducia-cloud/fiducia-payments.rs",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub GraphQL repository inventory"
+        }
+      ],
+      "from": "fiducia-cloud/.github",
+      "id": "sha256:5a5b65cffdcc771d6105b7e9b12cfdd75d651ae869e03142782a50ae042425d2",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "fiducia-cloud/fiducia-routing.rs",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub GraphQL repository inventory"
+        }
+      ],
+      "from": "fiducia-cloud/.github",
+      "id": "sha256:a557fe92fbadd4b6fe1115c67805fc0e2adb1992599318af7575070e62df0b88",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "fiducia-cloud/fiducia-sync",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub GraphQL repository inventory"
+        }
+      ],
+      "from": "fiducia-cloud/.github",
+      "id": "sha256:f02b38111b0c53c04990832dd1d71adc91a575a470d905f136482faf8685854c",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "fiducia-cloud/fiducia-telemetry.rs",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub GraphQL repository inventory"
+        }
+      ],
+      "from": "fiducia-cloud/.github",
+      "id": "sha256:54d312339a020aa03df5203d210b2fc77d996c3724bf9dc45817ed47ad645ce7",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "fiducia-cloud/fiducia-test-config",
+      "type": "governs"
+    },
+    {
+      "confidence": 0.82,
+      "evidence": [
+        {
+          "family": "fiducia",
+          "kind": "paired-repository-naming",
+          "source_role": "clients",
+          "target_role": "interfaces"
+        }
+      ],
+      "from": "fiducia-cloud/fiducia-clients",
+      "id": "sha256:47984541a2bb5dd9193f555d70abb3534a736c53d0ed4d374ab4f52954a30651",
+      "notes": "Conservative naming inference; confirm or override in the manual declaration file.",
+      "required": false,
+      "scope": "organization",
+      "status": "inferred",
+      "to": "fiducia-cloud/fiducia-interfaces",
+      "type": "depends_on"
+    },
+    {
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "kind": "repository-name",
+          "value": "fiducia-cloud.github.io"
+        }
+      ],
+      "from": "fiducia-cloud/fiducia-cloud.github.io",
+      "id": "sha256:62e83fa3a653e2bf549d03b1d79969f97d887180e4c1f012f41f8b265dcae38c",
+      "notes": "The conventional *.github.io repository documents the organization profile.",
+      "required": false,
+      "scope": "organization",
+      "status": "inferred",
+      "to": "fiducia-cloud/.github",
+      "type": "documents"
+    },
+    {
+      "confidence": 0.76,
+      "evidence": [
+        {
+          "family": "fiducia",
+          "kind": "paired-repository-naming"
+        }
+      ],
+      "from": "fiducia-cloud/fiducia-infra",
+      "id": "sha256:a8f5670eb875b0224f62c575ebcd659f0c4fabf9076e6698a377e96d8d64aa2e",
+      "notes": "Conservative naming inference; confirm or override in the manual declaration file.",
+      "required": false,
+      "scope": "organization",
+      "status": "inferred",
+      "to": "fiducia-cloud/fiducia-monorepo",
+      "type": "deploys"
+    },
+    {
+      "confidence": 0.82,
+      "evidence": [
+        {
+          "family": "fiducia",
+          "kind": "paired-repository-naming",
+          "source_role": "mcp-server",
+          "target_role": "interfaces"
+        }
+      ],
+      "from": "fiducia-cloud/fiducia-mcp-server.rs",
+      "id": "sha256:8bbe2848991e203dca959928f67c9de6e9b63f9145f5a2618cde0d06047cd624",
+      "notes": "Conservative naming inference; confirm or override in the manual declaration file.",
+      "required": false,
+      "scope": "organization",
+      "status": "inferred",
+      "to": "fiducia-cloud/fiducia-interfaces",
+      "type": "depends_on"
+    },
+    {
+      "confidence": 0.82,
+      "evidence": [
+        {
+          "family": "fiducia",
+          "kind": "paired-repository-naming",
+          "source_role": "sync",
+          "target_role": "interfaces"
+        }
+      ],
+      "from": "fiducia-cloud/fiducia-sync",
+      "id": "sha256:212588caf098b06a5e4785b17bb32e092c6e6acc329cdfb9899f64261ddac125",
+      "notes": "Conservative naming inference; confirm or override in the manual declaration file.",
+      "required": false,
+      "scope": "organization",
+      "status": "inferred",
+      "to": "fiducia-cloud/fiducia-interfaces",
+      "type": "depends_on"
+    }
+  ],
+  "repositories": [
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "fiducia-cloud/.github",
+      "github_id": "1320444409",
+      "name": ".github",
+      "owner": "fiducia-cloud",
+      "roles": [
+        "community-health",
+        "governance",
+        "relationship-registry"
+      ],
+      "source": "github-graphql-api",
+      "url": "https://github.com/fiducia-cloud/.github",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "fiducia-cloud/fiducia-admin.rs",
+      "github_id": "1281798992",
+      "name": "fiducia-admin.rs",
+      "owner": "fiducia-cloud",
+      "roles": [
+        "repository"
+      ],
+      "source": "github-graphql-api",
+      "url": "https://github.com/fiducia-cloud/fiducia-admin.rs",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "fiducia-cloud/fiducia-ai-agent-manager.rs",
+      "github_id": "1298856520",
+      "name": "fiducia-ai-agent-manager.rs",
+      "owner": "fiducia-cloud",
+      "roles": [
+        "repository"
+      ],
+      "source": "github-graphql-api",
+      "url": "https://github.com/fiducia-cloud/fiducia-ai-agent-manager.rs",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "fiducia-cloud/fiducia-auth.rs",
+      "github_id": "1281790760",
+      "name": "fiducia-auth.rs",
+      "owner": "fiducia-cloud",
+      "roles": [
+        "repository"
+      ],
+      "source": "github-graphql-api",
+      "url": "https://github.com/fiducia-cloud/fiducia-auth.rs",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "fiducia-cloud/fiducia-brain.rs",
+      "github_id": "1281765127",
+      "name": "fiducia-brain.rs",
+      "owner": "fiducia-cloud",
+      "roles": [
+        "repository"
+      ],
+      "source": "github-graphql-api",
+      "url": "https://github.com/fiducia-cloud/fiducia-brain.rs",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "fiducia-cloud/fiducia-cli.rs",
+      "github_id": "1281853002",
+      "name": "fiducia-cli.rs",
+      "owner": "fiducia-cloud",
+      "roles": [
+        "repository"
+      ],
+      "source": "github-graphql-api",
+      "url": "https://github.com/fiducia-cloud/fiducia-cli.rs",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "fiducia-cloud/fiducia-clients",
+      "github_id": "1281774566",
+      "name": "fiducia-clients",
+      "owner": "fiducia-cloud",
+      "roles": [
+        "clients"
+      ],
+      "source": "github-graphql-api",
+      "url": "https://github.com/fiducia-cloud/fiducia-clients",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "fiducia-cloud/fiducia-cloud.github.io",
+      "github_id": "1300841350",
+      "name": "fiducia-cloud.github.io",
+      "owner": "fiducia-cloud",
+      "roles": [
+        "documentation-site"
+      ],
+      "source": "github-graphql-api",
+      "url": "https://github.com/fiducia-cloud/fiducia-cloud.github.io",
+      "visibility": "public"
+    },
+    {
+      "archived": true,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "fiducia-cloud/fiducia-customer-ui.web",
+      "github_id": "1281878993",
+      "name": "fiducia-customer-ui.web",
+      "owner": "fiducia-cloud",
+      "roles": [
+        "repository"
+      ],
+      "source": "github-graphql-api",
+      "url": "https://github.com/fiducia-cloud/fiducia-customer-ui.web",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "fiducia-cloud/fiducia-customer.rs",
+      "github_id": "1281683204",
+      "name": "fiducia-customer.rs",
+      "owner": "fiducia-cloud",
+      "roles": [
+        "repository"
+      ],
+      "source": "github-graphql-api",
+      "url": "https://github.com/fiducia-cloud/fiducia-customer.rs",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "fiducia-cloud/fiducia-edge",
+      "github_id": "1281765224",
+      "name": "fiducia-edge",
+      "owner": "fiducia-cloud",
+      "roles": [
+        "repository"
+      ],
+      "source": "github-graphql-api",
+      "url": "https://github.com/fiducia-cloud/fiducia-edge",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "fiducia-cloud/fiducia-infra",
+      "github_id": "1281782803",
+      "name": "fiducia-infra",
+      "owner": "fiducia-cloud",
+      "roles": [
+        "infrastructure"
+      ],
+      "source": "github-graphql-api",
+      "url": "https://github.com/fiducia-cloud/fiducia-infra",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "fiducia-cloud/fiducia-interfaces",
+      "github_id": "1281801934",
+      "name": "fiducia-interfaces",
+      "owner": "fiducia-cloud",
+      "roles": [
+        "interfaces"
+      ],
+      "source": "github-graphql-api",
+      "url": "https://github.com/fiducia-cloud/fiducia-interfaces",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "fiducia-cloud/fiducia-lambda-service.rs",
+      "github_id": "1298856618",
+      "name": "fiducia-lambda-service.rs",
+      "owner": "fiducia-cloud",
+      "roles": [
+        "repository"
+      ],
+      "source": "github-graphql-api",
+      "url": "https://github.com/fiducia-cloud/fiducia-lambda-service.rs",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "fiducia-cloud/fiducia-load-balance.rs",
+      "github_id": "1281765158",
+      "name": "fiducia-load-balance.rs",
+      "owner": "fiducia-cloud",
+      "roles": [
+        "repository"
+      ],
+      "source": "github-graphql-api",
+      "url": "https://github.com/fiducia-cloud/fiducia-load-balance.rs",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "fiducia-cloud/fiducia-marketing.web",
+      "github_id": "1281683598",
+      "name": "fiducia-marketing.web",
+      "owner": "fiducia-cloud",
+      "roles": [
+        "repository"
+      ],
+      "source": "github-graphql-api",
+      "url": "https://github.com/fiducia-cloud/fiducia-marketing.web",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "fiducia-cloud/fiducia-mcp-server.rs",
+      "github_id": "1299564918",
+      "name": "fiducia-mcp-server.rs",
+      "owner": "fiducia-cloud",
+      "roles": [
+        "mcp-server"
+      ],
+      "source": "github-graphql-api",
+      "url": "https://github.com/fiducia-cloud/fiducia-mcp-server.rs",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "fiducia-cloud/fiducia-memory",
+      "github_id": "1298761788",
+      "name": "fiducia-memory",
+      "owner": "fiducia-cloud",
+      "roles": [
+        "repository"
+      ],
+      "source": "github-graphql-api",
+      "url": "https://github.com/fiducia-cloud/fiducia-memory",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "fiducia-cloud/fiducia-memory.rs",
+      "github_id": "1298791791",
+      "name": "fiducia-memory.rs",
+      "owner": "fiducia-cloud",
+      "roles": [
+        "repository"
+      ],
+      "source": "github-graphql-api",
+      "url": "https://github.com/fiducia-cloud/fiducia-memory.rs",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "fiducia-cloud/fiducia-messaging",
+      "github_id": "1298761864",
+      "name": "fiducia-messaging",
+      "owner": "fiducia-cloud",
+      "roles": [
+        "repository"
+      ],
+      "source": "github-graphql-api",
+      "url": "https://github.com/fiducia-cloud/fiducia-messaging",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "fiducia-cloud/fiducia-messaging.rs",
+      "github_id": "1298791795",
+      "name": "fiducia-messaging.rs",
+      "owner": "fiducia-cloud",
+      "roles": [
+        "repository"
+      ],
+      "source": "github-graphql-api",
+      "url": "https://github.com/fiducia-cloud/fiducia-messaging.rs",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "fiducia-cloud/fiducia-monorepo",
+      "github_id": "1281884511",
+      "name": "fiducia-monorepo",
+      "owner": "fiducia-cloud",
+      "roles": [
+        "monorepo"
+      ],
+      "source": "github-graphql-api",
+      "url": "https://github.com/fiducia-cloud/fiducia-monorepo",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "fiducia-cloud/fiducia-node-sidecar.rs",
+      "github_id": "1281765197",
+      "name": "fiducia-node-sidecar.rs",
+      "owner": "fiducia-cloud",
+      "roles": [
+        "repository"
+      ],
+      "source": "github-graphql-api",
+      "url": "https://github.com/fiducia-cloud/fiducia-node-sidecar.rs",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "fiducia-cloud/fiducia-node.rs",
+      "github_id": "1281765104",
+      "name": "fiducia-node.rs",
+      "owner": "fiducia-cloud",
+      "roles": [
+        "repository"
+      ],
+      "source": "github-graphql-api",
+      "url": "https://github.com/fiducia-cloud/fiducia-node.rs",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "fiducia-cloud/fiducia-payments.rs",
+      "github_id": "1309501674",
+      "name": "fiducia-payments.rs",
+      "owner": "fiducia-cloud",
+      "roles": [
+        "repository"
+      ],
+      "source": "github-graphql-api",
+      "url": "https://github.com/fiducia-cloud/fiducia-payments.rs",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "fiducia-cloud/fiducia-routing.rs",
+      "github_id": "1281765061",
+      "name": "fiducia-routing.rs",
+      "owner": "fiducia-cloud",
+      "roles": [
+        "repository"
+      ],
+      "source": "github-graphql-api",
+      "url": "https://github.com/fiducia-cloud/fiducia-routing.rs",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "fiducia-cloud/fiducia-sync",
+      "github_id": "1294417786",
+      "name": "fiducia-sync",
+      "owner": "fiducia-cloud",
+      "roles": [
+        "sync"
+      ],
+      "source": "github-graphql-api",
+      "url": "https://github.com/fiducia-cloud/fiducia-sync",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "fiducia-cloud/fiducia-telemetry.rs",
+      "github_id": "1281793442",
+      "name": "fiducia-telemetry.rs",
+      "owner": "fiducia-cloud",
+      "roles": [
+        "repository"
+      ],
+      "source": "github-graphql-api",
+      "url": "https://github.com/fiducia-cloud/fiducia-telemetry.rs",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "fiducia-cloud/fiducia-test-config",
+      "github_id": "1294402446",
+      "name": "fiducia-test-config",
+      "owner": "fiducia-cloud",
+      "roles": [
+        "repository"
+      ],
+      "source": "github-graphql-api",
+      "url": "https://github.com/fiducia-cloud/fiducia-test-config",
+      "visibility": "public"
+    }
+  ],
+  "schema_version": 1,
+  "unresolved_hints": []
+}
