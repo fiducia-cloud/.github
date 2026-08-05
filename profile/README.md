@@ -23,3 +23,13 @@ Before resolving a conflict, inspect the merge base and 3–10 relevant commits 
 Never resolve by blindly or wholesale selecting `ours`, `theirs`, current, or incoming. Produce a conceptual merge that preserves compatible intent, invariants, APIs, schemas, migrations, tests, documentation, security controls, and operational safeguards from all relevant sides. Document non-obvious decisions, scan the whole worktree for conflict markers, and run every affected validation contract. “Max context” means all relevant authorized context; it never authorizes exposing credentials, private data, or hidden reasoning.
 
 This public repository contains identifiers, links, and public operating guidance only. Do not place credentials, private customer data, or private operational details here.
+
+<!-- org-project-routing:start -->
+## Planning and delivery
+
+- [GitHub Project: fiducia-cloud-project](https://github.com/orgs/fiducia-cloud/projects/1)
+- [Linear planning project](https://linear.app/denman/project/githubcomfiducia-cloud-8fd5e1bec9d3)
+- [Detailed project-routing contract](../docs/PROJECTS.md)
+
+GitHub owns code and delivery evidence; Linear owns planning and dependencies. The linked organization Project provides the cross-repository execution view.
+<!-- org-project-routing:end -->
