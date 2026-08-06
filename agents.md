@@ -63,7 +63,7 @@ This blacklist is illustrative, not exhaustive. When an operation may destroy, d
 
 - Inspect with `git status`, `git diff`, `git log`, `git show`, and `git blame`.
 - Leave unrelated, uncommitted, and untracked work untouched.
-- Use a new additive branch, a separate clean worktree, or a separate clone when available.
+- Prefer the existing primary branch and coordinate concurrent file ownership directly; use another branch or clone only when required, and never use a worktree without explicit human instruction.
 - Stage explicit intended paths; do not stage unrelated work.
 - Commit new work normally, merge semantically, and push without force.
 - Prefer dry runs, read-only queries, backups, additive migrations, and reversible roll-forward changes.
