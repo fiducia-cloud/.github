@@ -1,4 +1,4 @@
-name: Agent policy
+name: Agent policy reusable check
 
 on:
   workflow_call:
@@ -22,6 +22,10 @@ permissions:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+concurrency:
+  group: fiducia-cloud-agent-policy-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
