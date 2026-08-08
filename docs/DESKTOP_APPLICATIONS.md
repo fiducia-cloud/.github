@@ -1,6 +1,6 @@
 # Fiducia Cloud desktop applications
 
-Verified **2026-08-06**.
+Verified **2026-08-07**.
 
 ## Required pair
 
@@ -79,8 +79,7 @@ Both implementations should converge on compatible behavior for:
 
 - GitHub Project: [`fiducia-cloud-project` — Project 1](https://github.com/orgs/fiducia-cloud/projects/1)
 - Linear project: `github.com/fiducia-cloud`
-- Central registry: [`ORESoftware/project-registry`](https://github.com/ORESoftware/project-registry/blob/main/registry/desktop-applications.json)
-- Toolkit strategy: [`rust-desktop-strategies.md`](https://github.com/ORESoftware/project-registry/blob/main/docs/rust-desktop-strategies.md)
+- Central private registry locator: `approved-private-registry` (opaque by policy; do not publish the backing repository name or URL here)
 - Portfolio rollout: [`DEN-2469`](https://linear.app/denman/issue/DEN-2469/roll-out-paired-rust-flutter-desktop-repositories-across-the-portfolio)
 
-Repository creation, toolkit changes, deep-link changes, renames, transfers, archival, or platform-status changes must update this document, Linear, the central registry/strategy, and both companion repositories together.
+Repository creation, toolkit changes, deep-link changes, renames, transfers, archival, or platform-status changes must update this document, Linear, the approved private registry, and both companion repositories together. Public documentation must keep the private registry locator opaque.
