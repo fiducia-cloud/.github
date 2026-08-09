@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-05",
+  "organization": "fiducia-cloud",
+  "canonicalGitHubProject": {
+    "number": 1,
+    "url": "https://github.com/orgs/fiducia-cloud/projects/1"
+  },
+  "canonicalLinearProject": {
+    "name": "fiducia-cloud",
+    "url": "https://linear.app/denman/project/fiducia-cloud-8fd5e1bec9d3"
+  },
+  "totals": {
+    "repositories": 34,
+    "active": 33,
+    "archived": 1
+  },
+  "repositories": [
+    {"name": ".github", "visibility": "public", "archived": false, "defaultBranch": "main", "category": "organization"},
+    {"name": "fiducia-admin.rs", "visibility": "public", "archived": false, "defaultBranch": "main", "category": "platform-service"},
+    {"name": "fiducia-ai-agent-bridge.rs", "visibility": "private", "archived": false, "defaultBranch": "main", "category": "agent-control"},
+    {"name": "fiducia-ai-agent-control-plane", "visibility": "private", "archived": false, "defaultBranch": "main", "category": "agent-control"},
+    {"name": "fiducia-ai-agent-coordinator.rs", "visibility": "private", "archived": false, "defaultBranch": "main", "category": "agent-control"},
+    {"name": "fiducia-ai-agent-manager.rs", "visibility": "public", "archived": false, "defaultBranch": "main", "category": "agent-control"},
+    {"name": "fiducia-auth.rs", "visibility": "public", "archived": false, "defaultBranch": "main", "category": "platform-service"},
+    {"name": "fiducia-brain.rs", "visibility": "public", "archived": false, "defaultBranch": "main", "category": "core-runtime"},
+    {"name": "fiducia-cli.rs", "visibility": "public", "archived": false, "defaultBranch": "main", "category": "interface-tooling"},
+    {"name": "fiducia-clients", "visibility": "public", "archived": false, "defaultBranch": "main", "category": "interface-tooling"},
+    {"name": "fiducia-cloud.github.io", "visibility": "public", "archived": false, "defaultBranch": "main", "category": "site"},
+    {"name": "fiducia-customer-ui.web", "visibility": "public", "archived": true, "defaultBranch": "main", "category": "site"},
+    {"name": "fiducia-customer.rs", "visibility": "public", "archived": false, "defaultBranch": "main", "category": "platform-service"},
+    {"name": "fiducia-e2e", "visibility": "private", "archived": false, "defaultBranch": "main", "category": "infra-test"},
+    {"name": "fiducia-edge", "visibility": "public", "archived": false, "defaultBranch": "main", "category": "core-runtime"},
+    {"name": "fiducia-infra", "visibility": "public", "archived": false, "defaultBranch": "main", "category": "infra-test"},
+    {"name": "fiducia-interfaces", "visibility": "public", "archived": false, "defaultBranch": "main", "category": "interface-tooling"},
+    {"name": "fiducia-lambda-service.rs", "visibility": "public", "archived": false, "defaultBranch": "main", "category": "platform-service"},
+    {"name": "fiducia-load-balance.rs", "visibility": "public", "archived": false, "defaultBranch": "main", "category": "core-runtime"},
+    {"name": "fiducia-marketing.web", "visibility": "public", "archived": false, "defaultBranch": "main", "category": "site"},
+    {"name": "fiducia-mcp-server.rs", "visibility": "public", "archived": false, "defaultBranch": "main", "category": "interface-tooling"},
+    {"name": "fiducia-memory", "visibility": "public", "archived": false, "defaultBranch": "main", "category": "platform-service"},
+    {"name": "fiducia-memory.rs", "visibility": "public", "archived": false, "defaultBranch": "main", "category": "platform-service"},
+    {"name": "fiducia-messaging", "visibility": "public", "archived": false, "defaultBranch": "main", "category": "platform-service"},
+    {"name": "fiducia-messaging.rs", "visibility": "public", "archived": false, "defaultBranch": "main", "category": "platform-service"},
+    {"name": "fiducia-monorepo", "visibility": "public", "archived": false, "defaultBranch": "main", "category": "interface-tooling"},
+    {"name": "fiducia-node-sidecar.rs", "visibility": "public", "archived": false, "defaultBranch": "main", "category": "core-runtime"},
+    {"name": "fiducia-node.rs", "visibility": "public", "archived": false, "defaultBranch": "main", "category": "core-runtime"},
+    {"name": "fiducia-operations-control-plane", "visibility": "private", "archived": false, "defaultBranch": "main", "category": "agent-control"},
+    {"name": "fiducia-payments.rs", "visibility": "public", "archived": false, "defaultBranch": "main", "category": "platform-service"},
+    {"name": "fiducia-routing.rs", "visibility": "public", "archived": false, "defaultBranch": "main", "category": "core-runtime"},
+    {"name": "fiducia-sync", "visibility": "public", "archived": false, "defaultBranch": "main", "category": "interface-tooling"},
+    {"name": "fiducia-telemetry.rs", "visibility": "public", "archived": false, "defaultBranch": "main", "category": "platform-service"},
+    {"name": "fiducia-test-config", "visibility": "public", "archived": false, "defaultBranch": "main", "category": "infra-test"}
+  ]
+}
