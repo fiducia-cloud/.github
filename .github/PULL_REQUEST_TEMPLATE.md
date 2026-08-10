@@ -47,7 +47,16 @@ Validation details:
 - [ ] Unrelated, uncommitted, and untracked work was left untouched; only intended paths were staged
 - [ ] No hook, test, review, branch-protection, or security control was bypassed
 - [ ] No secrets, credentials, personal data, customer data, or production data are included
+- [ ] Remote state was fetched before editing and before publishing
+- [ ] Documentation and generated artifacts were updated from authoritative sources
+- [ ] External Actions are pinned to reviewed full commit SHAs with least-privilege permissions and explicit timeouts
+- [ ] Authoritative remote branch, pull-request, and check evidence was verified
 
 ## Risks and rollout
 
 <!-- Operational risk, migration or roll-forward strategy, monitoring, and follow-up work. Prefer additive and reversible changes. -->
+
+- User or operational impact:
+- Security/privacy impact and secret-handling review:
+- Migration or compatibility considerations:
+- Roll-forward or recovery approach:
