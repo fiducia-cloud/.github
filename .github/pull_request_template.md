@@ -3,6 +3,16 @@
 - Canonical issue or URL: <!-- Required for every material change; for example DEN-123 -->
 - Newly discovered follow-up items: <!-- Link every feature, fix, enhancement, bug, vulnerability, reliability concern, documentation gap, or technical-debt item -->
 
+## GitHub issue relationship
+
+- Closing relationship: <!-- Required for managed changes; for example Closes #123 or Closes owner/repository#123 -->
+
+## Delivery lane
+
+- [ ] `integration`
+- [ ] `main` / `master`
+- [ ] Other branch (explain below)
+
 ## Summary
 
 <!-- What changed, why, and who or what is affected? -->
@@ -16,6 +26,7 @@
 - [ ] Relevant tests, formatting, linting, builds, contract checks, integrity checks, and security checks passed
 - [ ] Manual or end-to-end validation is described below
 - [ ] Validation evidence and final status are synchronized to Linear
+- [ ] The referenced GitHub issue and Linear issue are present on the organization Project
 
 Validation details:
 
@@ -36,47 +47,16 @@ Validation details:
 - [ ] Unrelated, uncommitted, and untracked work was left untouched; only intended paths were staged
 - [ ] No hook, test, review, branch-protection, or security control was bypassed
 - [ ] No secrets, credentials, personal data, customer data, or production data are included
+- [ ] Remote state was fetched before editing and before publishing
+- [ ] Documentation and generated artifacts were updated from authoritative sources
+- [ ] External Actions are pinned to reviewed full commit SHAs with least-privilege permissions and explicit timeouts
+- [ ] Authoritative remote branch, pull-request, and check evidence was verified
 
 ## Risks and rollout
 
 <!-- Operational risk, migration or roll-forward strategy, monitoring, and follow-up work. Prefer additive and reversible changes. -->
 
-<!-- ore-org-baseline:begin -->
-## Summary
-
-Describe the behavior and intent, not only the files changed.
-
-## Planning and dependencies
-
-- Linear project or issue: [github.com/fiducia-cloud](https://linear.app/denman/project/githubcomfiducia-cloud-8fd5e1bec9d3)
-- Related GitHub issues or pull requests:
-- Related repositories or external contracts:
-
-## Risk, security, migration, and rollback
-
 - User or operational impact:
 - Security/privacy impact and secret-handling review:
 - Migration or compatibility considerations:
-- Rollback or recovery approach:
-
-## Validation
-
-List exact commands, environments, and results. Include unit, integration, contract, build, and end-to-end evidence as applicable.
-
-## Conflict-resolution record
-
-- [ ] Remote state was fetched before editing and before pushing.
-- [ ] Concurrent work was preserved; no destructive operation or history rewrite was used.
-- [ ] Conflicts, if any, were resolved semantically using the merge base, both sides, 3–10 relevant commits, tests, contracts, linked work, and related repositories.
-- [ ] The complete worktree was scanned for unresolved conflict markers.
-- [ ] No `ours`/`theirs` side was accepted wholesale without conceptual review.
-
-## Final checklist
-
-- [ ] Focused commits and reviewable diff
-- [ ] Documentation and generated artifacts updated from authoritative sources
-- [ ] External Actions pinned to full commit SHAs
-- [ ] Explicit least-privilege workflow permissions and timeouts
-- [ ] No credentials, private data, or sensitive logs included
-- [ ] Authoritative remote branch/PR/check evidence verified
-<!-- ore-org-baseline:end -->
+- Roll-forward or recovery approach:
