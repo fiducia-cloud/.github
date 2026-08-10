@@ -37,7 +37,7 @@ When both browser and API responsibilities exist, the default is:
 ```text
 <product>-interfaces
 <product>-clients
-<product>-orm-core
+<product>-lib-core
 <product>-api-server.rs
 <product>-web-server.rs
 <product>-e2e
@@ -87,7 +87,7 @@ Normative rules:
 - SeaORM is the direct Rust persistence layer; do not add a parallel bare SQLx/tokio-postgres application layer.
 - Raw SeaORM connections, entity managers, and unrestricted query builders stay private to the persistence/ORM boundary.
 - Request/response, event, error, route, and authorization contracts come from `*-interfaces` and generated `*-clients`; do not duplicate ad hoc structs between web and API repositories.
-- `*-lib` remains domain/pure where practical. Database-generated code lives in the dedicated `*-orm-core` repository and is not re-exported through a general library as a compatibility shortcut.
+- `*-lib-core` is the single data-plane authority for persistence contracts, desired SQL, migration inputs, generated adapters, and named operations. A general-purpose `*-lib` remains domain/pure, while an existing standalone `*-orm-core` may survive only as a generated mirror or compatibility package sourced from `*-lib-core`.
 - A Cargo feature such as `read-write` expresses intent but is **not** a security boundary. Database grants and separate runtime credentials are authoritative; CI must also prove the web target cannot obtain the write surface.
 - Configuration is typed and auditable, normally through `flags-2-env`; credentials remain environment/secret-store only and never appear in flags, examples, logs, or generated manifests.
 
@@ -177,7 +177,7 @@ API-mediated reads are preferred because they centralize authorization, consiste
 2. The database principal has an explicit `SELECT` allowlist, no DML/DDL/ownership/role-switch privileges, and a pinned `search_path`.
 3. Every connection also sets and verifies `default_transaction_read_only=on`.
 4. `statement_timeout`, `lock_timeout`, `idle_in_transaction_session_timeout`, connection counts, and acquisition timeouts are bounded.
-5. The canonical `*-orm-core` exposes an opaque read context and named, policy-aware operations—not a raw connection or query builder.
+5. The canonical `*-lib-core` read capability exposes an opaque read context and named, policy-aware operations—not a raw connection or query builder.
 6. Every operation requires explicit actor/tenant authorization context, bounds result size, and redacts fields.
 7. Cross-tenant and write attempts are covered by negative tests; RLS is used where practical as a second boundary.
 8. Failure to establish the read-only property fails closed or degrades the affected view to an unavailable/offline state. It never falls back to a writer credential.
@@ -185,25 +185,18 @@ API-mediated reads are preferred because they centralize authorization, consiste
 
 Direct reads are a read-model optimization, not permission to move business logic into the presentation tier.
 
-## Shared ORM layer
+## Canonical data-plane library and generated ORM adapters
 
-Each organization uses one dedicated SeaORM repository:
+Each database-backed product organization uses one `*-lib-core` repository under the rules in [`LIB_CORE_AND_SERVICE_BOUNDARIES.md`](LIB_CORE_AND_SERVICE_BOUNDARIES.md). That repository owns the persistence contract, desired SQL, migration inputs, named operations, and generated adapters. It:
 
-- [`fiducia-cloud/fiducia-orm-core`](https://github.com/fiducia-cloud/fiducia-orm-core)
-- [`sonus-auris/sonus-auris-orm-core`](https://github.com/sonus-auris/sonus-auris-orm-core)
-- [`zed-pkg/zed-orm-core`](https://github.com/zed-pkg/zed-orm-core)
-
-The ORM package:
-
-- consumes only the organization/project slice from [`ORESoftware/k8s-libs-and-shared-defs`](https://github.com/ORESoftware/k8s-libs-and-shared-defs);
-- records the exact shared-definitions commit plus schema-input and generated-output digests;
-- fails CI when generated entities drift from the pinned input;
+- records exact source, schema-input, migration, generator, generated-output, and package digests;
+- fails CI when desired SQL, persistence JSON Schema, mappings, or generated adapters drift;
 - exposes opaque read contexts and named reads by default;
-- exposes the write context/operations only to explicit API/worker consumers;
-- contains no production migration runner;
+- exposes write contexts/operations only to API servers and explicitly delegated workers;
+- supplies migration assets only to a separate serialized migration job;
 - tests PostgreSQL and CockroachDB separately when dual-engine support is claimed.
 
-Generated code provenance, not a moving branch or copied entity directory, is the source of truth.
+Rust adapters use SeaORM. Existing standalone repositories such as `fiducia-orm-core`, `sonus-auris-orm-core`, and `zed-orm-core` are transitional compatibility packages or generated mirrors: they must identify their exact `*-lib-core` source and may not retain independent SQL, migrations, generated entities, or hand-authored write operations. `ORESoftware/k8s-libs-and-shared-defs` remains a registry for source pins, namespaces, deployment targets, and optional generated snapshots—not the human-authored product schema authority.
 
 ## Web-to-API transport
 
@@ -286,8 +279,8 @@ Cloudflare may provide TLS termination, WAF/rate limiting, caching, and public r
 
 | Organization | Observed state | Classification | Required follow-through |
 | --- | --- | --- | --- |
-| `sonus-auris` | `sonus-auris-api-server.rs` is the consolidated product API and owns domain writes. `sonus-auris-web-server.rs` writes only its encrypted browser-session table and currently reads user-domain data through the typed API. | Conforming split. Web-session writes are a valid web-owned-state exception. | Keep shared direct reads optional/read-only; keep the web session migrator isolated; finish exact ORM provenance and live permission evidence under DEN-2787. |
-| `zed-pkg` | `zed-api-server.rs` still has legacy migration-at-boot behavior on `main`; `zed-web-server.rs` directly reads the registry DB and mirrors entities. Draft PRs `zed-api-server.rs#19` and `zed-web-server.rs#6` move migration out of startup and enforce the read-only web identity. | Intended split, implementation incomplete. | Merge only after exact-head Rust/Kustomize tests, provision `api_rw`/`web_ro`/`migrator` roles, add the discrete DPM Job, consume canonical `zed-orm-core`, and run `zed-pkg-test` permission/E2E lanes. |
+| `sonus-auris` | `sonus-auris-api-server.rs` is the consolidated product API and owns domain writes. `sonus-auris-web-server.rs` writes only its encrypted browser-session table and currently reads user-domain data through the typed API. | Conforming split. Web-session writes are a valid web-owned-state exception. | Keep shared direct reads optional/read-only; keep the web session migrator isolated; finish exact `sonus-auris-lib-core` provenance and live permission evidence under DEN-2787. |
+| `zed-pkg` | `zed-api-server.rs` still has legacy migration-at-boot behavior on `main`; `zed-web-server.rs` directly reads the registry DB and mirrors entities. Draft PRs `zed-api-server.rs#19` and `zed-web-server.rs#6` move migration out of startup and enforce the read-only web identity. | Intended split, implementation incomplete. | Merge only after exact-head Rust/Kustomize tests, provision `api_rw`/`web_ro`/`migrator` roles, add the discrete DPM Job, consume canonical `zed-lib-core` (with `zed-orm-core` only as a pinned compatibility mirror), and run `zed-pkg-test` permission/E2E lanes. |
 | `fiducia-cloud` | `fiducia-customer.rs` renders the customer app and still owns narrowly scoped customer profile/preferences/session/notification mutations; credential lifecycle is delegated to `fiducia-auth`. Coordination services remain on the specialized cluster. | Explicit combined BFF/API transition—not a read-only web server. | Keep customer and shared-coordination credentials separate; classify routes by owner; plan a dedicated customer API when mutation volume/stability justifies it; never extend the BFF writer into shared coordination data. |
 
 The audit therefore corrects four common ambiguities:
@@ -345,7 +338,7 @@ DEN-3043 owns the machine-readable linter/exception format and must detect capab
 ## Remediation order
 
 1. Merge this role taxonomy into the three canonical `.github`/Linear plans and the cross-org architecture registry.
-2. Finish `*-orm-core` provenance, opaque-context, compile-fail, and live database evidence.
+2. Finish `*-lib-core` provenance, opaque-context, compile-fail, and live database evidence; convert each standalone `*-orm-core` into a pinned generated/compatibility surface or retire it.
 3. Complete Zed’s discrete migration job and read-only web credential, then certify exact heads in `zed-pkg-test`.
 4. Keep Sonus Auris shared reads API-mediated unless a measured direct-read case satisfies every exception gate.
 5. Maintain the explicit `combined-bff-api` classification for `fiducia-customer.rs`; create/split a customer API as a focused rollout rather than silently treating presentation code as the domain boundary.
