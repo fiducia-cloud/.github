@@ -39,6 +39,13 @@ jobs:
                   raise RuntimeError(f'{label}: expected one exact match, found {count}')
               return text.replace(old, new, 1)
 
+          def replace_recipe_line(text: str, header: str) -> str:
+              pattern = rf'(?m)^{re.escape(header)}$'
+              changed, count = re.subn(pattern, header + ' _env-dec', text, count=1)
+              if count != 1:
+                  raise RuntimeError(f'recipe {header}: expected one exact line, found {count}')
+              return changed
+
           text = target.read_text()
           marker = '_dotenv := "python3 " + justfile_directory() / ".just" / "dotenv.py"\n'
           helper = marker + '''
@@ -76,7 +83,7 @@ jobs:
               'env-doctor:',
           ]
           for header in headers:
-              text = replace_once(text, header, header + ' _env-dec', f'recipe {header}')
+              text = replace_recipe_line(text, header)
 
           bootstrap = '    mkdir -p {{ _dec }} && chmod 700 {{ _dec }}\n'
           if text.count(bootstrap) != 2:
