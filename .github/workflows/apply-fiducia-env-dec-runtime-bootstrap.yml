@@ -25,10 +25,13 @@ jobs:
           import subprocess
 
           target = Path('.just/env.just')
-          expected = 'ee12997816949193825385f386f9b161e6a8c645'
+          expected = {
+              'a83fcae1cb28a8f7c3784cde759613421158c1eb',
+              'ee12997816949193825385f386f9b161e6a8c645',
+          }
           actual = subprocess.check_output(['git', 'hash-object', str(target)], text=True).strip()
-          if actual != expected:
-              raise RuntimeError(f'{target}: expected {expected}, found {actual}')
+          if actual not in expected:
+              raise RuntimeError(f'{target}: unsupported current blob {actual}; expected one of {sorted(expected)}')
 
           def replace_once(text: str, old: str, new: str, label: str) -> str:
               count = text.count(old)
