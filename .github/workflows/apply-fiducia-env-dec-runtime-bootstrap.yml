@@ -1,0 +1,108 @@
+name: Apply Fiducia env/dec runtime bootstrap
+
+on:
+  workflow_call:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out caller branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
+
+      - name: Apply exact shared-module patch
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          import subprocess
+
+          target = Path('.just/env.just')
+          expected = 'ee12997816949193825385f386f9b161e6a8c645'
+          actual = subprocess.check_output(['git', 'hash-object', str(target)], text=True).strip()
+          if actual != expected:
+              raise RuntimeError(f'{target}: expected {expected}, found {actual}')
+
+          def replace_once(text: str, old: str, new: str, label: str) -> str:
+              count = text.count(old)
+              if count != 1:
+                  raise RuntimeError(f'{label}: expected one exact match, found {count}')
+              return text.replace(old, new, 1)
+
+          text = target.read_text()
+          marker = '_dotenv := "python3 " + justfile_directory() / ".just" / "dotenv.py"\n'
+          helper = marker + '''
+          # env/dec is runtime-only and deliberately absent from Git. Every public
+          # env recipe depends on this bootstrap, including recipes that normally keep
+          # plaintext in memory, so fresh clones have one filesystem contract.
+          [private]
+          _env-dec:
+              #!/usr/bin/env bash
+              set -euo pipefail
+              path="{{ _dec }}"
+              [[ ! -L "$path" ]] || { echo "env/dec must not be a symlink" >&2; exit 1; }
+              [[ ! -e "$path" || -d "$path" ]] || { echo "env/dec must be a directory" >&2; exit 1; }
+              mkdir -p "$path"
+              chmod 700 "$path"
+          '''
+          text = replace_once(text, marker, helper, 'private _env-dec helper')
+
+          headers = [
+              'env-list:',
+              'env-decrypt *names:',
+              'env-encrypt *names:',
+              'env-edit name:',
+              'env-new name:',
+              'env-run name +cmd:',
+              'env-status:',
+              'env-rekey:',
+              'env-whoami:',
+              'env-keygen:',
+              'env-check:',
+              'env-clean:',
+              'env-docker-run name +args:',
+              'env-docker-env-file name:',
+              'env-k8s-secret name secret="":',
+              'env-doctor:',
+          ]
+          for header in headers:
+              text = replace_once(text, header, header + ' _env-dec', f'recipe {header}')
+
+          bootstrap = '    mkdir -p {{ _dec }} && chmod 700 {{ _dec }}\n'
+          if text.count(bootstrap) != 2:
+              raise RuntimeError(f'inline bootstrap: expected two matches, found {text.count(bootstrap)}')
+          text = text.replace(bootstrap, '', 2)
+
+          public_headers = [
+              line for line in text.splitlines()
+              if re.match(r'^env-[A-Za-z0-9_-]+(?:\s+[^:]*)?:', line)
+          ]
+          missing = [line for line in public_headers if not line.endswith(': _env-dec')]
+          if missing:
+              raise RuntimeError('recipes missing _env-dec: ' + ', '.join(missing))
+
+          target.write_text(text)
+          PY
+
+      - name: Validate, remove caller, and push
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f .github/workflows/apply-env-dec-runtime-bootstrap.yml
+          git diff --check
+          grep -q '^_env-dec:' .just/env.just
+          grep -q 'mkdir -p "$path"' .just/env.just
+          test "$(grep -c ': _env-dec$' .just/env.just)" -eq 16
+          test -z "$(git ls-files -- env/dec)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Ensure every env recipe bootstraps env/dec"
+          git push origin HEAD:${GITHUB_REF_NAME}
