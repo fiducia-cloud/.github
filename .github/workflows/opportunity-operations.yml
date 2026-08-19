@@ -1,0 +1,38 @@
+name: Opportunity operations policy
+
+on:
+  pull_request:
+    paths:
+      - "docs/OPPORTUNITY_OPERATIONS.md"
+      - "tools/validate_opportunity_operations.py"
+      - "tests/test_opportunity_operations.py"
+      - ".github/workflows/opportunity-operations.yml"
+  push:
+    branches: [main]
+    paths:
+      - "docs/OPPORTUNITY_OPERATIONS.md"
+      - "tools/validate_opportunity_operations.py"
+      - "tests/test_opportunity_operations.py"
+      - ".github/workflows/opportunity-operations.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: opportunity-operations-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Validate public policy
+        run: python3 tools/validate_opportunity_operations.py
+      - name: Run fail-closed tests
+        run: python3 -m unittest discover -s tests -p 'test_opportunity_operations.py' -v
