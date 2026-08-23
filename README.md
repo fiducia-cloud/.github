@@ -9,6 +9,11 @@ This special public `.github` repository is the discoverable organization anchor
 - `.github/workflows/org-context-integrity.yml` verifies this mirror against its immutable central registry commit.
 - The generated profile and custom agent carry the mandatory semantic Git conflict-resolution policy.
 
+## Canonical service/data architecture
+
+- [`*-lib-core` data plane and Rust web/API boundary](LIB_CORE_AND_SERVICE_BOUNDARIES.md)
+- [Full service and data architecture](SERVICE_AND_DATA_ARCHITECTURE.md)
+
 The source of truth is the reviewed central registry named in `project-context.yaml`. Generated files should not be edited independently. Keep this repository public-safe.
 
 
