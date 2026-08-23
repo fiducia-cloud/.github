@@ -1,0 +1,31 @@
+name: Opportunity readiness integrity
+
+on:
+  pull_request:
+    paths:
+      - "docs/OPPORTUNITY_READINESS.md"
+      - "tools/validate_opportunity_readiness.py"
+      - "tests/test_opportunity_readiness.py"
+      - ".github/workflows/opportunity-readiness.yml"
+  push:
+    branches: [main]
+    paths:
+      - "docs/OPPORTUNITY_READINESS.md"
+      - "tools/validate_opportunity_readiness.py"
+      - "tests/test_opportunity_readiness.py"
+      - ".github/workflows/opportunity-readiness.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - run: python3 tools/validate_opportunity_readiness.py
+      - run: python3 -m unittest tests/test_opportunity_readiness.py -v
