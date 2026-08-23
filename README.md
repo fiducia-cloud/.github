@@ -8,6 +8,9 @@ This special public `.github` repository is the discoverable organization anchor
 - `agents/org-context.agent.md` is the organization-level GitHub Copilot custom-agent profile.
 - `.github/workflows/org-context-integrity.yml` verifies this mirror against its immutable central registry commit.
 - The generated profile and custom agent carry the mandatory semantic Git conflict-resolution policy.
+- [`agents.md`](agents.md) is the canonical lowercase agent policy; [`AGENTS.md`](AGENTS.md) is its full compatibility mirror.
+- [`.github/copilot-instructions.md`](.github/copilot-instructions.md) carries the compatible Copilot policy.
+- [`scripts/validate-agent-policy.sh`](scripts/validate-agent-policy.sh) is the portable policy validator.
 
 ## Canonical service/data architecture
 
@@ -36,6 +39,21 @@ All Git conflicts must be resolved semantically with full historical, repository
 ## GitHub inheritance boundary
 
 GitHub can use supported community-health files from a public organization `.github` repository as fallbacks and can render `profile/README.md` on the organization page. `agents.md`, `AGENTS.md`, Copilot instructions, workflows, settings, rulesets, branch protections, permissions, and secrets are not automatically inherited merely because they exist here. Each repository must carry or synchronize compatible local policy and explicitly call reusable workflows where enforcement is required.
+
+Consumers must pin the reusable policy workflow to a reviewed immutable 40-character commit SHA:
+
+```yaml
+jobs:
+  agent-policy:
+    uses: fiducia-cloud/.github/.github/workflows/agent-policy.yml@<reviewed-40-character-commit-sha>
+```
+
+Run both local fail-closed policy gates before proposing a change:
+
+```sh
+bash scripts/validate-agent-policy.sh
+bash tests/agent-policy-validator.sh
+```
 
 Generated managed-policy version: `2026-08-08`.
 <!-- ore-org-baseline:end -->

@@ -9,6 +9,7 @@ permissions:
 jobs:
   apply:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Check out caller branch
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
@@ -105,7 +106,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          rm -f .github/workflows/apply-env-dec-runtime-bootstrap.yml
+          git rm -- .github/workflows/apply-env-dec-runtime-bootstrap.yml
           git diff --check
           grep -q '^_env-dec:' .just/env.just
           grep -q 'mkdir -p "$path"' .just/env.just
