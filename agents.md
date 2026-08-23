@@ -12,7 +12,16 @@ Resolve the current working directory, walk upward to the filesystem root, and r
 
 **avoid git rebase in favor of git merge.**
 
-Use additive branches and semantic merge commits. Never rewrite shared history to make integration appear simpler. Inspect the current branch, worktree, remotes, default branch, related Linear work item, open pull requests, and affected cross-repository contracts before editing.
+Work directly on the existing `main` branch and use semantic merge commits. Do not create or use feature branches or Git worktrees. An alternate branch is permitted only when a human or a repository-specific release process explicitly requires it; merge that history back into `main` without rewriting shared history. Inspect the current branch, worktree, remotes, default branch, related Linear work item, open pull requests, and affected cross-repository contracts before editing.
+
+## Main-branch and concurrent-agent policy
+
+This organization policy overrides generic feature-branch and worktree defaults for agent tooling.
+
+- Work directly on `main`, including when other agents are active. Coordinate repository and file ownership through the available agent communication channel instead of isolating routine work on another branch or worktree.
+- Never create or use a Git worktree unless a human explicitly instructs you to do so for the current task. Concurrency alone is not permission to use a worktree.
+- Keep edits scoped, inspect live state before each write, and hand off cleanly.
+- Preserve unrelated in-progress changes and never overwrite another agent's work. If safe ownership of overlapping files cannot be established, pause that overlapping edit and coordinate before continuing.
 
 ## Required semantic conflict-resolution declaration
 
@@ -63,7 +72,7 @@ This blacklist is illustrative, not exhaustive. When an operation may destroy, d
 
 - Inspect with `git status`, `git diff`, `git log`, `git show`, and `git blame`.
 - Leave unrelated, uncommitted, and untracked work untouched.
-- Use a new additive branch, a separate clean worktree, or a separate clone when available.
+- Prefer the existing `main` branch and coordinate concurrent file ownership directly. Use another branch or clone only when explicitly required, and never use a worktree without explicit human instruction.
 - Stage explicit intended paths; do not stage unrelated work.
 - Commit new work normally, merge semantically, and push without force.
 - Prefer dry runs, read-only queries, backups, additive migrations, and reversible roll-forward changes.
@@ -134,7 +143,7 @@ Do not use destructive commands merely to make tests pass, clear a conflict, sim
 
 ### Required safe alternatives
 
-Use additive branches, separate clean worktrees or clones, explicit path staging, ordinary commits, non-force pushes, patch-based edits, read-only queries, dry runs, backups, additive migrations, and reversible roll-forward changes. Leave unrelated work untouched. When safe progress is impossible, preserve all state and report the exact blocker.
+Use direct `main`-branch work, coordinated file ownership, explicit path staging, ordinary commits, non-force pushes, patch-based edits, read-only queries, dry runs, backups, additive migrations, and reversible roll-forward changes. Do not create a branch or worktree merely to avoid coordination. Leave unrelated work untouched. When safe progress is impossible, preserve all state and report the exact blocker.
 
 ## Source ownership and cross-repository context
 
@@ -146,5 +155,5 @@ Never print, log, commit, paste into issues, include in fixtures, or expose toke
 
 ## Pull requests, validation, and evidence
 
-Use focused branches and pull requests. Link the relevant Linear issue or project. Explain behavior, risks, migration and roll-forward considerations, security impact, tests run, conflicts and their semantic resolution, and cross-repository dependencies. Never report a branch, commit, pull request, merge, deployment, test run, or external update as complete without authoritative remote evidence.
+Use focused commits on `main`; use an alternate branch or pull request only when a human or repository-specific release process explicitly requires one. Link the relevant Linear issue or project. Explain behavior, risks, migration and roll-forward considerations, security impact, tests run, conflicts and their semantic resolution, and cross-repository dependencies. Never report a branch, commit, pull request, merge, deployment, test run, or external update as complete without authoritative remote evidence.
 <!-- ore-org-baseline:end -->
