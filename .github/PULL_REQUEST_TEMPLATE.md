@@ -10,9 +10,8 @@
 
 ## Delivery lane
 
-- [ ] `integration`
-- [ ] `main` / `master`
-- [ ] Other branch (explain below)
+- [ ] `main`
+- [ ] Human- or release-process-required alternate branch (explain below)
 
 ## Summary
 
@@ -58,6 +57,11 @@ Validation details:
 ## Risks and rollout
 
 <!-- User or operational impact, security/privacy impact, migration and roll-forward strategy, rollback or recovery approach, monitoring, and follow-up work. Prefer additive and reversible changes. -->
+
+- User or operational impact:
+- Security/privacy impact and secret-handling review:
+- Migration or compatibility considerations:
+- Roll-forward or recovery approach:
 
 ## Review readiness
 
