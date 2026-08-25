@@ -1,15 +1,22 @@
 # Fiducia Cloud desktop applications
 
-Verified **2026-08-07**.
+Verified **2026-08-25**.
 
 ## Required pair
 
 Fiducia Cloud is allocated two first-class desktop applications:
 
-- Rust: [`fiducia-cloud/fiducia-desktop.rs`](https://github.com/fiducia-cloud/fiducia-desktop.rs) — **planned**, not yet verified as published.
-- Flutter: [`fiducia-cloud/fiducia-flutter`](https://github.com/fiducia-cloud/fiducia-flutter) — **planned**, not yet verified as published.
+- Rust: [`fiducia-cloud/fiducia-desktop.rs`](https://github.com/fiducia-cloud/fiducia-desktop.rs) — **published** at [`468d2b4`](https://github.com/fiducia-cloud/fiducia-desktop.rs/commit/468d2b4f979cc6c6588efb1c16a5a6d8b38a15e8).
+- Flutter: [`fiducia-cloud/fiducia-flutter`](https://github.com/fiducia-cloud/fiducia-flutter) — **published** at [`d23a6d5`](https://github.com/fiducia-cloud/fiducia-flutter/commit/d23a6d5d3287defd86b64ce941a93019a95e84d0).
 
-Both repository names are allocation targets. Do not mark either implementation live until the remote, native build, packaging, tests, and supported-platform matrix are verified.
+Publication is verified independently from release readiness. The remote heads, released Zed package-manager contracts, deterministic lifecycle tests, and macOS native builds are verified. Flutter's Android debug build is also exercised in hosted CI. Windows, Linux, iOS-device, signing, notarization, store distribution, and the complete supported-platform matrix remain release gates; do not describe either application as generally available until those gates have current evidence.
+
+## Publication evidence
+
+- The Rust exact-head [formal application lifecycle run](https://github.com/fiducia-cloud/fiducia-desktop.rs/actions/runs/32871995851) passed released-Zed validation, Quint traces, bounded Apalache verification, Rust checks, and native macOS GPUI compilation.
+- The Flutter exact-head [formal application lifecycle run](https://github.com/fiducia-cloud/fiducia-flutter/actions/runs/32871999372) passed released-Zed validation, Quint traces, bounded Apalache verification, Dart analysis/tests, native macOS compilation, and an Android debug build.
+- Both repositories pin `.zpkg.toml` and `.zpkg.lock`; dependency installation and project commands are routed through the released Zed CLI.
+- The paired Quint specification and deterministic test source are byte-identical across the repositories at these heads. Bounded simulation and model-checking evidence is not an unbounded proof.
 
 ## Rust desktop kit: GPUI, fully native
 
@@ -23,7 +30,7 @@ The Rust application uses **GPUI**.
 
 This choice prioritizes high-rate telemetry, deterministic rendering, low memory/CPU overhead, native security boundaries, and responsive incident/operator workflows.
 
-The future Rust repository must contain `docs/DESKTOP_TOOLKIT.md` with the GPUI version policy, no-WebView rule, privilege boundaries, performance budgets, deep-link contract, native packaging matrix, and Flutter companion workflow.
+The Rust repository contains `docs/DESKTOP_TOOLKIT.md` with the GPUI version policy, no-WebView rule, privilege boundaries, performance budgets, deep-link contract, native packaging matrix, and Flutter companion workflow.
 
 ## Why both Rust and Flutter remain active
 
@@ -31,7 +38,7 @@ The applications are developed side-by-side to compare native performance, secur
 
 Every desktop-facing feature must inspect both repositories, share acceptance criteria and fixtures, and normally update both. A one-sided change requires a documented no-change rationale, parity assessment, and follow-up work. Completion in only one repository is not full desktop completion.
 
-The future `fiducia-desktop.rs` README, `AGENTS.md`, pull-request template, and `docs/DESKTOP_TOOLKIT.md` must state this parallel-development rule prominently.
+The `fiducia-desktop.rs` README, `AGENTS.md`, pull-request template, and `docs/DESKTOP_TOOLKIT.md` state this parallel-development rule prominently.
 
 ## HTTPS-first deep links
 
