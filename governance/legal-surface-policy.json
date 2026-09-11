@@ -1,0 +1,26 @@
+{
+  "schema": "ores.legal-surface-policy/v1",
+  "organization": "fiducia-cloud",
+  "docsRepository": "fiducia-cloud/fiducia-docs",
+  "patternSource": "ores-legal/ores-legal-docs",
+  "authorities": {
+    "typespec": "contracts/main.tsp",
+    "jsonSchema": "contracts/authored.schema.json",
+    "registry": "contracts/instances/LegalRegistry/valid/registry.json",
+    "runtimeManifest": "generated/legal-runtime-manifest.json"
+  },
+  "statusPolicy": {
+    "runtimeAdmitted": ["approved"],
+    "runtimeBlocked": ["draft", "review_required", "gap"]
+  },
+  "surfaces": [
+    {"surface":"fiducia-cli.rs","requiredFamilies":["cli_tools","eula","software_license"],"acceptanceRequired":true},
+    {"surface":"fiducia-node.rs","requiredFamilies":["end_user_runtime","eula","privacy_data","security"],"acceptanceRequired":true},
+    {"surface":"fiducia-node-sidecar.rs","requiredFamilies":["end_user_runtime","privacy_data","security"],"acceptanceRequired":true},
+    {"surface":"fiducia-desktop.rs","requiredFamilies":["end_user_runtime","eula","software_license","privacy_data"],"acceptanceRequired":true},
+    {"surface":"hosted-services","requiredFamilies":["customer_services","service_level","service_objective","privacy_data","security"],"acceptanceRequired":false},
+    {"surface":"professional-services","requiredFamilies":["customer_services","statement_of_work","nda"],"acceptanceRequired":false}
+  ],
+  "reviewTriggers": ["permissions","credentials","destructive-commands","networking","telemetry","retention","billing","service-levels","subprocessors","customer-hosted-runtime","professional-services","onboarding","offboarding"],
+  "forbiddenGitContent": ["executed-agreements","signatures","customer-evidence","credentials","privileged-communications","personnel-records","identity-documents"]
+}
