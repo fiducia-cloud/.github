@@ -2,3 +2,7 @@ __pycache__/
 *.py[cod]
 tmp/
 temp/
+
+# Repository-local temporary data and authorized Git worktrees
+tmp/worktrees
+temp/worktrees
