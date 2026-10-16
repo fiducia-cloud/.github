@@ -27,7 +27,8 @@
       },
       "database_scope": "none",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-admin.rs",
@@ -47,7 +48,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-ai-agent-manager.rs",
@@ -67,7 +69,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-assets",
@@ -87,7 +90,8 @@
       },
       "database_scope": "none",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-auth.rs",
@@ -107,7 +111,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-brain.rs",
@@ -127,7 +132,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-cli.rs",
@@ -147,7 +153,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-clients",
@@ -167,7 +174,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-cloud.github.io",
@@ -187,7 +195,8 @@
       },
       "database_scope": "none",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-customer-ui.web",
@@ -207,7 +216,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "archived",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-customer.rs",
@@ -227,7 +237,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-desktop.rs",
@@ -247,7 +258,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-edge",
@@ -267,7 +279,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-flutter",
@@ -287,7 +300,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-infra",
@@ -307,7 +321,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-interfaces",
@@ -327,7 +342,8 @@
       },
       "database_scope": "none",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-lambda-service.rs",
@@ -347,7 +363,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-lib",
@@ -367,7 +384,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-lib-core",
@@ -387,7 +405,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-load-balance.rs",
@@ -407,7 +426,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-marketing.web",
@@ -427,7 +447,8 @@
       },
       "database_scope": "none",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-mcp-server.rs",
@@ -447,7 +468,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-memory",
@@ -467,7 +489,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-memory.rs",
@@ -487,7 +510,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-messaging",
@@ -507,7 +531,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-messaging.rs",
@@ -527,7 +552,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-monorepo",
@@ -547,7 +573,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-node-sidecar.rs",
@@ -567,7 +594,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-node.rs",
@@ -587,7 +615,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-orm-core",
@@ -607,7 +636,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-payments.rs",
@@ -627,7 +657,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-pub-lib-core",
@@ -647,7 +678,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-routing.rs",
@@ -667,7 +699,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-supabase",
@@ -687,7 +720,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-sync",
@@ -707,7 +741,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-telemetry.rs",
@@ -727,7 +762,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "fiducia-cloud/fiducia-test-config",
@@ -747,7 +783,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     }
   ]
 }
