@@ -1,5 +1,7 @@
 # fiducia-cloud organization context
 
+**Organization scripting policy:** [Rust, not Python scripts](CONTRIBUTING.md#rust-first-scripts-and-automation); documented Python app exceptions only.
+
 This special public `.github` repository is the discoverable organization anchor for humans and AI agents.
 
 - `profile/README.md` is the visible organization profile.
