@@ -1,0 +1,790 @@
+{
+  "version": 1,
+  "organization": "fiducia-cloud",
+  "inventory_visibility": "public-only",
+  "governance": {
+    "approval_required": true,
+    "unverified_fields_grant_no_access": true,
+    "separate_admin_deployments": true,
+    "public_registry_excludes_private_repositories": true
+  },
+  "repositories": [
+    {
+      "repository": "fiducia-cloud/.github",
+      "category": "governance",
+      "trust_domain": "shared-library",
+      "source_authority": "canonical",
+      "release_unit": {
+        "kind": "none",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "none",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-admin.rs",
+      "category": "source",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "unverified",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-ai-agent-manager.rs",
+      "category": "source",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "unverified",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-assets",
+      "category": "assets",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "none",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "none",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-auth.rs",
+      "category": "source",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "unverified",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-brain.rs",
+      "category": "source",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "unverified",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-cli.rs",
+      "category": "tooling",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "cli",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-clients",
+      "category": "sdk",
+      "trust_domain": "shared-library",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "sdk",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-cloud.github.io",
+      "category": "documentation",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "site",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "none",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-customer-ui.web",
+      "category": "source",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "unverified",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "archived",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-customer.rs",
+      "category": "source",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "unverified",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-desktop.rs",
+      "category": "source",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "unverified",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-edge",
+      "category": "source",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "unverified",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-flutter",
+      "category": "app",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "application",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-infra",
+      "category": "infrastructure",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "unverified",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-interfaces",
+      "category": "contracts",
+      "trust_domain": "shared-library",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "library",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "none",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-lambda-service.rs",
+      "category": "source",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "unverified",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-lib",
+      "category": "source",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "unverified",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-lib-core",
+      "category": "source",
+      "trust_domain": "shared-library",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "library",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-load-balance.rs",
+      "category": "source",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "unverified",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-marketing.web",
+      "category": "documentation",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "site",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "none",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-mcp-server.rs",
+      "category": "app",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "service",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-memory",
+      "category": "source",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "unverified",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-memory.rs",
+      "category": "source",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "unverified",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-messaging",
+      "category": "source",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "unverified",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-messaging.rs",
+      "category": "source",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "unverified",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-monorepo",
+      "category": "integration",
+      "trust_domain": "unverified",
+      "source_authority": "pinned-integration-superproject",
+      "release_unit": {
+        "kind": "integration",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-node-sidecar.rs",
+      "category": "source",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "unverified",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-node.rs",
+      "category": "source",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "unverified",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-orm-core",
+      "category": "source",
+      "trust_domain": "shared-library",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "library",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-payments.rs",
+      "category": "source",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "unverified",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-pub-lib-core",
+      "category": "source",
+      "trust_domain": "shared-library",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "library",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-routing.rs",
+      "category": "source",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "unverified",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-supabase",
+      "category": "source",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "unverified",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-sync",
+      "category": "source",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "library",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-telemetry.rs",
+      "category": "source",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "unverified",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    },
+    {
+      "repository": "fiducia-cloud/fiducia-test-config",
+      "category": "source",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "unverified",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
+    }
+  ]
+}
